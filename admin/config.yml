@@ -13,7 +13,7 @@ collections:
     label: "Darussan Wa'azi"
     folder: "posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Suna (Title)", name: "title", widget: "string"}
       - {label: "Kwanan Wata", name: "date", widget: "datetime"}
