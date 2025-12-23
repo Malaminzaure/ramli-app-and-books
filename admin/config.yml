@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: Malaminzaure/ramli-app-and-books
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Darussan Wa'azi"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Suna (Title)", name: "title", widget: "string"}
+      - {label: "Kwanan Wata", name: "date", widget: "datetime"}
+      - {label: "Hoton Darasi", name: "image", widget: "image", required: false}
+      - {label: "Rubutun Darasi", name: "body", widget: "markdown"}
