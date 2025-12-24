@@ -161,4 +161,5 @@ lijit.com, 558045, RESELLER, fafdf38b16bf6b2b
 anzu.io, 691e95644e633a6eee2567ee, RESELLER, 1c1b7acf4992136c
 zmaticoo.com, 5135063, RESELLER
 unity.com, 8661247, DIRECT, 96cabb5fbdde37a7
+unityads.com, 6012298, DIRECT
 copper6.com, 766114, RESELLER
