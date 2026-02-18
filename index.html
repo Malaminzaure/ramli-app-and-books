@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramli Apps & Books Store</title>
     
-    <!-- WANNAN LAYIN GOOGLE CANONICAL NE (KAR KA GOGE) -->
+    <!-- WANNAN LAYIN GOOGLE CANONICAL NE -->
     <link rel="canonical" href="https://malaminzaure.com.ng/" />
 
-    <!-- WANNAN LAYIN SHINE MAI GYARA KWALLIYAR SHAFI (KAR KA GOGE) -->
+    <!-- GOOGLE ANALYTICS (G-HV3WB53K6V) -->
+    <!-- Na saka maka ID din da ke jikin hoton da ka turo -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV3WB53K6V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HV3WB53K6V');
+    </script>
+    <!-- KARSHE GOOGLE ANALYTICS -->
+
+    <!-- TAILWIND CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <meta name="description" content="Sami littattafan Ramli da Hisabi da Hausa daga Malamin Zaure. Sauke Apps na lissafin Ramli.">
@@ -16,7 +28,7 @@
 </head>
 <body class="bg-gray-100 font-sans">
     
-    <!-- Header (Saman Shafi mai Menu da Hoto) -->
+    <!-- Header -->
     <header class="bg-blue-600 text-white p-6 text-center shadow-lg relative">
         
         <!-- BUTTON HAGU: DARASI -->
@@ -27,9 +39,8 @@
             <span class="font-bold text-xs text-center leading-tight">Darussan Ramli</span>
         </a>
 
-        <!-- BUTTON DAMA: SIRRUKA (WANNAN SHINE WANDA YA BACE DAZU) -->
+        <!-- BUTTON DAMA: SIRRUKA -->
         <a href="sirruka.html" class="absolute top-4 right-4 text-white bg-purple-700 p-2 rounded hover:bg-purple-800 transition duration-300 shadow-md flex flex-col items-center gap-1 w-24 border border-purple-500">
-            <!-- Icon din Makulli (Key) -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
             </svg>
@@ -45,10 +56,10 @@
 
     <div class="container mx-auto p-4">
         
-        <!-- Link zuwa Blog -->
-        <div style="text-align: center; margin: 30px 0;">
-           <a href="darasi.html" style="background-color: #28a745; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-              🌐 KARANTA DARUSSAN RAMLI
+        <!-- Link zuwa Blog (Na Maida shi Tailwind mai kyau) -->
+        <div class="text-center my-8">
+           <a href="darasi.html" class="bg-green-600 text-white py-3 px-6 rounded-lg font-bold text-lg shadow-lg hover:bg-green-700 transition duration-300 flex items-center justify-center gap-2 w-fit mx-auto transform hover:scale-105">
+              <span>🌐</span> KARANTA DARUSSAN RAMLI
            </a>
         </div>
 
@@ -120,20 +131,20 @@
                 <a href="https://paystack.com/buy/bankin-hukunce-hukuncen-ramli-qagfzy" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
             </div>
 
-             <!-- Littafi na 8 (Mabudin 1) -->
+             <!-- Littafi na 8 -->
              <div class="bg-white rounded-lg shadow-md p-4 text-center">
                 <img src="mabudi.png" alt="mabudin ramli 1" class="mx-auto mb-4 rounded">
                 <h3 class="font-bold text-lg">Mabudin Ramli 1</h3>
-                <p class="text-gray-600 mb-4">Littafin karatun ramli wanda ya tattaro karatun ramli tun daga farko cikin sauki.</p>
+                <p class="text-gray-600 mb-4">Littafin karatun ramli tun daga farko cikin sauki.</p>
                 <p class="text-blue-600 font-bold text-xl mb-4">N700</p>
                 <a href="https://paystack.com/buy/mabudin-ramli-yuujkx" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
             </div>
 
-            <!-- Littafi na 9 (Mabudin 2) -->
+            <!-- Littafi na 9 -->
             <div class="bg-white rounded-lg shadow-md p-4 text-center">
                 <img src="mabudin.png" alt="mabudin ramli 2" class="mx-auto mb-4 rounded">
                 <h3 class="font-bold text-lg">Mabudin Ramli 2</h3>
-                <p class="text-gray-600 mb-4">Littafin karatun ramli wanda ya tattaro hukunce hukuncen ramli masu kyau.</p>
+                <p class="text-gray-600 mb-4">Littafin hukunce hukuncen ramli masu kyau.</p>
                 <p class="text-blue-600 font-bold text-xl mb-4">N700</p>
                 <a href="https://paystack.com/buy/mabudin-ramli-2-xxxyah" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
             </div>
