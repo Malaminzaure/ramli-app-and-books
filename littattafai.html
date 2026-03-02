@@ -1,138 +1,156 @@
-<!-- Header -->
-<header class="bg-blue-600 text-white p-6 text-center shadow-lg relative flex flex-col items-center justify-center">
-
-    <!-- BUTTON HAGU: Koma Karatu (Index) -->
-    <!-- Na sa wannan ya koma index.html don su koma karatu -->
-    <a href="index.html" class="absolute top-4 left-4 text-white bg-blue-700 p-2 rounded hover:bg-blue-800 transition duration-300 shadow-md flex flex-col items-center gap-1 w-24 border border-blue-500 z-10">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 0 0018 18a8.967 0 00-6 2.292m0-14.25v14.25" />
-        </svg>
-        <span class="font-bold text-xs text-center leading-tight">Karanta Darussa</span>
-    </a>
-
-    <!-- Hotonka -->
-    <img src="profile.jpg" alt="Malamin Zaure" class="w-32 h-32 rounded-full border-4 border-white mb-4 object-cover shadow-sm">
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <!-- AdSense Code (idan kana so ka saka) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3849511422647420" crossorigin="anonymous"></script>
     
-    <h1 class="text-3xl font-bold italic">RAMLI DIGITAL STORE</h1>
-    <p class="mt-2 text-blue-100">Sami Kyawawan Apps da Littattafan Musulunci daga Malamin Zaure</p>
-    <p class="font-bold text-yellow-300 text-lg mt-1">📞 08109988689</p>
-</header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Littattafan Malamin Zaure - Siya Littattafan Ramli</title>
+    <meta name="description" content="Sami Kyawawan Littattafan Ilimin Ramli da Falaki daga Malamin Zaure.">
+    <link rel="canonical" href="https://malaminzaure.com.ng/littattafai.html" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-relaxed">
 
-    <div class="container mx-auto p-4">
+    <!-- HEADER: Mai Link zuwa Darussa -->
+    <header class="bg-blue-700 text-white p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- WANNAN SHINE LINK DIN ZUWA DARUSSA -->
+            <a href="index.html" class="bg-green-500 text-white px-4 py-2 rounded font-bold hover:bg-green-600 shadow-md animate-pulse text-sm md:text-base flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 0 0018 18a8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+                KARANTA DARUSSA
+            </a>
+            <h1 class="text-xl font-bold tracking-wider">RAMLI DIGITAL STORE</h1>
+        </div>
+    </header>
+
+    <!-- CONTENT SECTION (BAYAN HEADER) -->
+    <div class="container mx-auto p-4 max-w-4xl mt-6">
         
-        <!-- Link zuwa Blog (Na Maida shi Tailwind mai kyau) -->
-        <div class="text-center my-8">
-           <a href="darasi.html" class="bg-green-600 text-white py-3 px-6 rounded-lg font-bold text-lg shadow-lg hover:bg-green-700 transition duration-300 flex items-center justify-center gap-2 w-fit mx-auto transform hover:scale-105">
-              <span>🌐</span> KARANTA DARUSSAN RAMLI
-           </a>
+        <!-- Gabatarwar Store -->
+        <div class="text-center my-6 bg-white p-8 rounded-lg shadow-md">
+            <img src="profile.jpg" alt="Malamin Zaure" class="w-32 h-32 rounded-full mx-auto border-4 border-blue-400 mb-4 object-cover shadow-lg">
+            <h2 class="text-3xl font-bold italic text-blue-800">Sami Littattafan Ramli na Musamman</h2>
+            <p class="mt-3 text-gray-700 leading-relaxed">
+                Muna tattara maka muhimman littattafai da kayan aiki don zurfafa iliminka na Ramli. 
+                Duk littattafanmu an tsara su ne don sauƙaƙa fahimta, daga masu farawa har zuwa ƙwararru.
+            </p>
+            <p class="font-bold text-yellow-600 text-lg mt-3">📞 Kira mu ko tuntuɓe mu ta WhatsApp: 08109988689</p>
         </div>
 
-        <h2 class="text-2xl font-bold border-b-2 border-blue-600 mb-6 pb-2">Littattafan PDF masu kyau</h2>
+        <h2 class="text-2xl font-bold border-b-2 border-blue-600 mb-6 pb-2 text-gray-800">Littattafan PDF masu kyau</h2>
         
         <!-- Grid na Littattafai -->
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
             <!-- Littafi na 1 -->
-            <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="rijiyarramli.jpg" alt="Littafin Rijiyar Ramli" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">Littafin Ramli zalla wannan littafin koda ace bakasan komaiba a wannan ilmin idan kamallakeshi zaka fahimta cikin sauki</h3>
-                <p class="text-gray-600 mb-4">Bayani daki-daki akan lissafin ramli.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N1,000</p>
-                <a href="https://paystack.com/buy/rijiyar-ramli-kcqxkc" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>            
+            <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="rijiyarramli.jpg" alt="Littafin Rijiyar Ramli" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">Littafin Ramli zalla</h3>
+                <p class="text-gray-600 text-sm mb-4">Wannan littafin koda ace bakasan komaiba a wannan ilmin idan kamallakeshi zaka fahimta cikin sauki.</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N1,000</p>
+                <a href="https://paystack.com/buy/rijiyar-ramli-kcqxkc" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>            
             </div>
 
             <!-- Littafi na 2 -->
-            <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="meciki.jpg" alt="Hukuncin Me Ciki" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">Hukuncin Me Ciki A Ramli</h3>
-                <p class="text-gray-600 mb-4">Littafi mai bayani akan hukunce-hukuncen ciki acikin ilmin ramli zaka iya siya anan ko dadauki lambata asaman shafin domin tuntubata ta whatsapp.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N1,000</p>
-                <a href="https://paystack.com/buy/hukuncin-me-ciki-a-ramli-xiozma" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>            
+            <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="meciki.jpg" alt="Hukuncin Me Ciki" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">Hukuncin Me Ciki A Ramli</h3>
+                <p class="text-gray-600 text-sm mb-4">Littafi mai bayani akan hukunce-hukuncen ciki acikin ilmin ramli...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N1,000</p>
+                <a href="https://paystack.com/buy/hukuncin-me-ciki-a-ramli-xiozma" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>            
             </div>
 
             <!-- Littafi na 3 -->
-            <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="magani.png" alt="Cuta da magani" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">Cuta da magani a ramli</h3>
-                <p class="text-gray-600 mb-4">Zaka iya cirewa mutum maganin cutar da take damunshi kuma kabashi yayi amfani dashi yadace da izinin allah.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N1,000</p>
-                <a href="https://paystack.com/buy/cuta-da-magani-rteiqm" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="magani.png" alt="Cuta da magani" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">Cuta da magani a ramli</h3>
+                <p class="text-gray-600 text-sm mb-4">Zaka iya cirewa mutum maganin cutar da take damunshi kuma kabashi yayi amfani dashi...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N1,000</p>
+                <a href="https://paystack.com/buy/cuta-da-magani-rteiqm" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>
             </div>
 
             <!-- Littafi na 4 -->
-            <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="sadaka.png" alt="cire sadaka a ramli" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">Cire sadaka a ramli</h3>
-                <p class="text-gray-600 mb-4">idan kazuba kasarka da wannan littafin zaka cire sada akan aikin dakayi Kaga wace irin sadaka yadace kayi Allah ya biya bukata.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N1,000</p>
-                <a href="https://paystack.com/buy/cire-sadaka-a-ramli-cvpkxk" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="sadaka.png" alt="cire sadaka a ramli" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">Cire sadaka a ramli</h3>
+                <p class="text-gray-600 text-sm mb-4">idan kazuba kasarka da wannan littafin zaka cire sada akan aikin dakayi...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N1,000</p>
+                <a href="https://paystack.com/buy/cire-sadaka-a-ramli-cvpkxk" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>
             </div>
 
             <!-- Littafi na 5 -->
-            <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="falakil.jpg" alt="Alfalak" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">الفلك المشحول في علم الرمل</h3>
-                <p class="text-gray-600 mb-4">Duk wani karatu daya shahara na ramli zaka sameshi aciki amma littafin na aravic ne shahararren littafine.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N1,500</p>
-                <a href="https://paystack.com/buy/------otjhlr" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="falakil.jpg" alt="Alfalak" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">الفلك المشحول في علم الرمل</h3>
+                <p class="text-gray-600 text-sm mb-4">Duk wani karatu daya shahara na ramli zaka sameshi aciki amma littafin na aravic ne...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N1,500</p>
+                <a href="https://paystack.com/buy/------otjhlr" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>
             </div>
 
             <!-- Littafi na 6 -->
-             <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="sirril.jpg" alt="Sirril Madlub" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">سر المطلوب في علم الرمل</h3>
-                <p class="text-gray-600 mb-4">Littafin sirril madalub na Husaibakar wannan littafin baka bukatar dogon hukunci kawai cikin sauki zaka samu bayaninka.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N1,000</p>
-                <a href="https://paystack.com/buy/-----copoav" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
+             <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="sirril.jpg" alt="Sirril Madlub" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">سر المطلوب في علم الرمل</h3>
+                <p class="text-gray-600 text-sm mb-4">Littafin sirril madalub na Husaibakar wannan littafin baka bukatar dogon hukunci...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N1,000</p>
+                <a href="https://paystack.com/buy/-----copoav" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>
             </div>
 
             <!-- Littafi na 7 -->
-             <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="bankin.png" alt="Bankin hukunci" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">Bankin Hukunce-hukuncen Ramli</h3>
-                <p class="text-gray-600 mb-4">Littafin hukunce hukuncen ramli Wannan littafin Bankin Hukunce-hukunce yana dauke da bayanai kan yadda ake fitar da hukunci a ilimin ramli. Zai taimaka wajen gane abubuwan da suka shafi taurari da lissafi cikin sauki.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N500</p>
-                <a href="https://paystack.com/buy/bankin-hukunce-hukuncen-ramli-qagfzy" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
+             <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="bankin.png" alt="Bankin hukunci" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">Bankin Hukunce-hukuncen Ramli</h3>
+                <p class="text-gray-600 text-sm mb-4">Wannan littafin yana dauke da bayanai kan yadda ake fitar da hukunci a ilimin ramli...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N500</p>
+                <a href="https://paystack.com/buy/bankin-hukunce-hukuncen-ramli-qagfzy" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>
             </div>
 
              <!-- Littafi na 8 -->
-             <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="mabudi.png" alt="mabudin ramli 1" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">Mabudin Ramli 1</h3>
-                <p class="text-gray-600 mb-4">Littafin karatun ramli tun daga farko cikin sauki wannan littafin koda ace bakasan komaiba a wannan ilmin idan kamallakeshi zaka fahimta cikin sauki.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N700</p>
-                <a href="https://paystack.com/buy/mabudin-ramli-yuujkx" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
+             <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="mabudi.png" alt="mabudin ramli 1" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">Mabudin Ramli 1</h3>
+                <p class="text-gray-600 text-sm mb-4">Littafin karatun ramli tun daga farko cikin sauki...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N700</p>
+                <a href="https://paystack.com/buy/mabudin-ramli-yuujkx" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>
             </div>
 
             <!-- Littafi na 9 -->
-            <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="mabudin.png" alt="mabudin ramli 2" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">Mabudin Ramli 2</h3>
-                <p class="text-gray-600 mb-4">Littafin hukunce hukuncen ramli masu kyau wannan littafin shine na 2 kuma shima koda ace bakasan komaiba a wannan ilmin idan kamallakeshi zaka fahimta cikin sauki har zuwa fitarda hukunci.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N700</p>
-                <a href="https://paystack.com/buy/mabudin-ramli-2-xxxyah" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="mabudin.png" alt="mabudin ramli 2" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">Mabudin Ramli 2</h3>
+                <p class="text-gray-600 text-sm mb-4">Littafin hukunce hukuncen ramli masu kyau wannan littafin shine na 2...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N700</p>
+                <a href="https://paystack.com/buy/mabudin-ramli-2-xxxyah" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>
             </div>
 
-             <!-- Littafi na 9 -->
-            <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                <img src="adduajalabi.png" alt="Cire addu'a ta jalabi a ramli" class="mx-auto mb-4 rounded">
-                <h3 class="font-bold text-lg">Cire addu'a ta jalabi a ramli</h3>
-                <p class="text-gray-600 mb-4">Littafin cire addu'a ta neman budi a wajan allah a ramli wannan littafin idan kamallakeshi zaka fahimci komai cikin sauki har zuwa fitarda hukuncinka.</p>
-                <p class="text-blue-600 font-bold text-xl mb-4">N1,000</p>
-                <a href="https://paystack.com/buy/cire-addua-ta-jalabi-a-ramli-hfhvjh" class="bg-green-500 text-white px-2 py-1 rounded text-sm hover:bg-green-600 font-bold block w-full">Siya yanzu</a>
+             <!-- Littafi na 10 -->
+            <div class="bg-white rounded-lg shadow-md p-4 text-center transform hover:scale-105 transition-transform duration-200">
+                <img src="adduajalabi.png" alt="Cire addu'a ta jalabi a ramli" class="mx-auto mb-4 rounded w-full h-40 object-cover">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">Cire addu'a ta jalabi a ramli</h3>
+                <p class="text-gray-600 text-sm mb-4">Littafin cire addu'a ta neman budi a wajan allah a ramli...</p>
+                <p class="text-green-600 font-bold text-xl mb-4">N1,000</p>
+                <a href="https://paystack.com/buy/cire-addua-ta-jalabi-a-ramli-hfhvjh" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 font-bold block w-full">Siya yanzu</a>
             </div>
 
         </div>
     </div>
 
-   <footer class="text-center p-10 text-gray-500">
-    &copy; 2025 Ramli Digital. All rights reserved.
-    <p class="text-center text-sm text-gray-400 mt-2 underline">
-        <a href="about.html">About Us</a> | 
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="terms.html">Terms & Conditions</a> | 
-        <a href="contact.html">Contact Us</a>
-    </p>
-</footer>
+    <!-- FOOTER: Mai Link zuwa Terms & Contact -->
+    <footer class="text-center p-10 text-gray-500 bg-gray-200 mt-10">
+        &copy; 2026 Ramli Digital. All rights reserved.
+        <p class="text-center text-sm text-gray-600 mt-2 font-bold">
+            <a href="about.html" class="hover:text-blue-600">About Us</a> | 
+            <a href="privacy.html" class="hover:text-blue-600">Privacy Policy</a> | 
+            <a href="terms.html" class="hover:text-blue-600">Terms & Conditions</a> | 
+            <a href="contact.html" class="hover:text-blue-600">Contact Us</a>
+        </p>
+    </footer>
+
 </body>
 </html>
