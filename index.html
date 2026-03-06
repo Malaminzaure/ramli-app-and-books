@@ -16,25 +16,6 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- PREMIUM PASSWORD SCRIPT -->
-    <script>
-    function shigaPremium() {
-        // CANJA 1234 ZUWA PASSWORD DIN DA KAKE SO
-        var passwordNaGaske = "8888"; 
-        
-        var amsa = prompt("Saka Password domin budewa:\n(Idan baka da shi, danna Cancel ka yi magana ta WhatsApp)");
-    
-        if (amsa === passwordNaGaske) {
-            window.location.href = "premium-ramli.html";
-        } else if (amsa != null) {
-            var saya = confirm("Password ba daidai bane!\n\nKana so ka yi magana ta WhatsApp domin biyan kudi a baka Password?");
-            if (saya) {
-                // CANJA LAMBAR WAYA A NAN
-                window.location.href = "https://wa.me/2348109988689?text=Salam%20Malamin%20Zaure%20ina%20so%20in%20biya%20kudi%20domin%20samun%20Password%20na%20Karatun%20VIP";
-            }
-        }
-    }
-    </script>
 </head>
 
 <body class="bg-gray-100 font-sans leading-relaxed">
@@ -1140,6 +1121,102 @@
     document.addEventListener("DOMContentLoaded", function(){
         console.log("Malamin Zaure Website Loaded Successfully");
     });
+</script>
+
+
+    <!-- MODAL POPUP NA PASSWORD (PROFESSIONAL DESIGN) -->
+<div id="passwordModal" class="fixed inset-0 bg-gray-900 bg-opacity-90 hidden items-center justify-center z-50 backdrop-blur-sm px-4">
+    
+    <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-8 max-w-md w-full border-t-8 border-yellow-500 relative animate-bounce-in">
+        
+        <!-- Maballin Rufe (X) -->
+        <button onclick="rufeModal()" class="absolute top-3 right-4 text-gray-400 hover:text-red-600 text-3xl font-bold transition">&times;</button>
+
+        <!-- Taken Shafi -->
+        <div class="text-center mb-6">
+            <h3 class="text-2xl font-extrabold text-blue-900 border-b-2 border-gray-100 pb-3">
+                🔐 KARATUN VIP
+            </h3>
+        </div>
+
+        <!-- Bayanin Biyan Kudi -->
+        <div class="text-center space-y-4 mb-6">
+            <p class="text-gray-700 font-medium text-lg leading-relaxed">
+                Idan kana bukatar shiga sashin koyan <span class="text-red-600 font-bold">Cikakken Karatun Ramli</span>,
+            </p>
+            
+            <div class="bg-green-50 border border-green-200 p-3 rounded-xl">
+                <p class="text-gray-600 text-sm">Kudin Shiga:</p>
+                <p class="text-3xl font-bold text-green-600">₦3,000</p>
+            </div>
+
+            <p class="text-sm text-gray-500">
+                Ka yi magana ta WhatsApp domin biya a baka Password:
+            </p>
+
+            <!-- Link na WhatsApp -->
+            <a href="https://wa.me/2348109988689" class="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-2 rounded-full font-bold shadow hover:bg-green-600 transition w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
+                </svg>
+                08109988689
+            </a>
+        </div>
+
+        <!-- Wajen Saka Password -->
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2 text-left">Saka Password:</label>
+            <input type="password" id="passwordInput" placeholder="Misali: 1234" 
+                   class="w-full px-4 py-3 border-2 border-blue-300 rounded-xl focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 text-lg transition shadow-inner text-center tracking-widest">
+        </div>
+
+        <!-- Maballin Shiga -->
+        <button onclick="tabbatarDaPassword()" 
+                class="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold py-3 rounded-xl hover:from-blue-700 hover:to-blue-900 shadow-lg transform active:scale-95 transition text-lg">
+            🔓 BUDE SHAFI
+        </button>
+
+    </div>
+</div>
+
+
+
+
+
+    <script>
+    // 1. Aikin Bude Modal (Ana kiran wannan idan an danna jan button)
+    function shigaPremium() {
+        const modal = document.getElementById('passwordModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    // 2. Aikin Rufe Modal (Idan an danna X)
+    function rufeModal() {
+        const modal = document.getElementById('passwordModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+
+    // 3. Aikin Duba Password
+    function tabbatarDaPassword() {
+        var input = document.getElementById('passwordInput').value;
+        
+        // --- ANAN ZAKA SA PASSWORD DIN DA KAKE SO ---
+        var passwordNaGaske = "1234"; 
+        // ---------------------------------------------
+
+        if (input === passwordNaGaske) {
+            // Idan yasa daidai
+            window.location.href = "premium-ramli.html";
+        } else {
+            // Idan yasa ba daidai ba (zaa yi masa ja a border)
+            var inputField = document.getElementById('passwordInput');
+            inputField.style.borderColor = "red";
+            inputField.style.backgroundColor = "#ffe6e6";
+            alert("Password ba daidai bane! Tuntubi Malamin Zaure.");
+        }
+    }
 </script>
 
 </body>
