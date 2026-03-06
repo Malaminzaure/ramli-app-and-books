@@ -1209,14 +1209,23 @@
         if (input === passwordNaGaske) {
             // Idan yasa daidai
             window.location.href = "premium-ramli.html";
-        } else {
-            // Idan yasa ba daidai ba (zaa yi masa ja a border)
+            
+       } else {
+            // Idan yasa ba daidai ba - Ga abin da zai faru:
+            
+            // 1. Canja launin akwatin ya zama Ja
             var inputField = document.getElementById('passwordInput');
             inputField.style.borderColor = "red";
             inputField.style.backgroundColor = "#ffe6e6";
-            alert("Password ba daidai bane! Tuntubi Malamin Zaure a whatsapp https://wa.me/2348109988689 .");
+
+            // 2. Tambayar mutum ko yana so ya yi magana ta WhatsApp
+            var amsa = confirm("Password ba daidai bane!\n\nKana so ka yi magana ta WhatsApp domin samun Password?");
+
+            // 3. Idan ya danna "OK", sai a kai shi WhatsApp
+            if (amsa === true) {
+                window.location.href = "https://wa.me/2348109988689?text=Salam%20Malam%20nasa%20password%20ba%20daidai%20ba,%20ina%20so%20in%20biya%20domin%20samun%20password.";
+            }
         }
-    }
 </script>
 
 </body>
