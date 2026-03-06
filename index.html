@@ -15,6 +15,26 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PREMIUM PASSWORD SCRIPT -->
+    <script>
+    function shigaPremium() {
+        // CANJA 1234 ZUWA PASSWORD DIN DA KAKE SO
+        var passwordNaGaske = "8888"; 
+        
+        var amsa = prompt("Saka Password domin budewa:\n(Idan baka da shi, danna Cancel ka yi magana ta WhatsApp)");
+    
+        if (amsa === passwordNaGaske) {
+            window.location.href = "premium-ramli.html";
+        } else if (amsa != null) {
+            var saya = confirm("Password ba daidai bane!\n\nKana so ka yi magana ta WhatsApp domin biyan kudi a baka Password?");
+            if (saya) {
+                // CANJA LAMBAR WAYA A NAN
+                window.location.href = "https://wa.me/2348109988689?text=Salam%20Malamin%20Zaure%20ina%20so%20in%20biya%20kudi%20domin%20samun%20Password%20na%20Karatun%20VIP";
+            }
+        }
+    }
+    </script>
 </head>
 
 <body class="bg-gray-100 font-sans leading-relaxed">
@@ -38,6 +58,13 @@
                class="inline-block bg-yellow-400 text-blue-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-300 shadow-md animate-pulse text-lg transition duration-300">
                🛒 DANNA NAN DOMIN SIYAN LITTATTAFAI
             </a>
+            <!-- PREMIUM BUTTON (SABO) -->
+            <div class="mt-4">
+                <button onclick="shigaPremium()"
+                   class="inline-block bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 shadow-md animate-pulse text-lg transition duration-300 border-2 border-white">
+                   🔐 KARATUN RAMLI CIKAKKE (VIP)
+                </button>
+            </div>
 
         </div>
     </header>
