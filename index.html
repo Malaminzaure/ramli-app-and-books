@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="bg-gray-100 font-sans leading-relaxed">
+<body id="babban-shafi" class="bg-gray-100 text-gray-900 font-sans leading-relaxed transition-colors duration-300">
 
     <!-- TOP INFO BAR -->
     <div class="bg-gray-900 text-white text-center text-sm py-2">
@@ -2207,6 +2207,53 @@
             if (amsa === true) {
                 window.location.href = "https://wa.me/2348109988689?text=Salam%20Malam%20nasa%20password%20ba%20daidai%20ba,%20ina%20so%20in%20biya%20domin%20samun%20password.";
             }
+        }
+    }
+</script>
+
+    <!-- SCRIPT NA DARK MODE -->
+<script>
+    function canjaKala() {
+        const body = document.getElementById('babban-shafi');
+        const button = document.getElementById('theme-toggle');
+        const cards = document.querySelectorAll('.bg-white'); // Zai kamo duk darussan
+
+        // Duba shin yana Dark Mode ne yanzu?
+        if (body.classList.contains('bg-gray-900')) {
+            // MAYAR DA SHI FARI (LIGHT MODE)
+            body.classList.replace('bg-gray-900', 'bg-gray-100');
+            body.classList.replace('text-gray-100', 'text-gray-900');
+            button.innerHTML = "🌙"; // Alamar Wata
+            
+            // Mayar da katunan darussa fari
+            cards.forEach(card => {
+                card.classList.replace('bg-gray-800', 'bg-white');
+                card.classList.remove('text-gray-200');
+            });
+            
+            // Ajiye zabin a wayar mutum (Domin idan ya dawo gobe ya ganshi yadda ya bari)
+            localStorage.setItem('theme', 'light');
+
+        } else {
+            // MAYAR DA SHI BAKI (DARK MODE)
+            body.classList.replace('bg-gray-100', 'bg-gray-900');
+            body.classList.replace('text-gray-900', 'text-gray-100');
+            button.innerHTML = "☀️"; // Alamar Rana
+            
+            // Mayar da katunan darussa baki
+            cards.forEach(card => {
+                card.classList.replace('bg-white', 'bg-gray-800');
+                card.classList.add('text-gray-200');
+            });
+
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // Wannan zai duba wane zabi mutum ya yi a baya idan ya sake bude shafin
+    window.onload = function() {
+        if (localStorage.getItem('theme') === 'dark') {
+            canjaKala(); // Kunna Dark Mode kai tsaye
         }
     }
 </script>
