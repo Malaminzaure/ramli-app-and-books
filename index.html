@@ -15,6 +15,34 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TSARIN DARK MODE STYLE (GYARARRE) -->
+    <style>
+        /* Idan shafin ya zama Dark Mode */
+        body.dark-theme {
+            background-color: #111827 !important; /* Bakin Bango gaba daya */
+            color: #f3f4f6 !important; /* Farin Rubutu a waje */
+        }
+        
+        /* Gyaran Katunan Darussa */
+        body.dark-theme .bg-white {
+            background-color: #1f2937 !important; /* Bakin Kati */
+            border-color: #374151 !important; /* Kalar layin jikin kati */
+        }
+
+        /* Gyaran Rubutun Cikin Katunan don ya fita radau (Fari) */
+        body.dark-theme p.text-gray-700,
+        body.dark-theme p.text-gray-600,
+        body.dark-theme p.text-gray-800,
+        body.dark-theme ul.text-gray-800,
+        body.dark-theme li {
+            color: #d1d5db !important; /* Farin Rubutu Mai Haske a jikin darasi */
+        }
+
+        /* Gyaran Kanun Darasi (Headings) don suyi kyau a cikin duhu */
+        body.dark-theme .bg-white h2 {
+            color: #93c5fd !important; /* Kalar Shudi Mai Haske don Taken Darasi */
+        }
+    </style>
 
 </head>
 
@@ -2211,49 +2239,32 @@
     }
 </script>
 
-    <!-- SCRIPT NA DARK MODE -->
+
+    <!-- SCRIPT NA DARK MODE (MAI KYAU) -->
 <script>
     function canjaKala() {
         const body = document.getElementById('babban-shafi');
         const button = document.getElementById('theme-toggle');
-        const cards = document.querySelectorAll('.bg-white'); // Zai kamo duk darussan
 
-        // Duba shin yana Dark Mode ne yanzu?
-        if (body.classList.contains('bg-gray-900')) {
+        // Idan shafin yana da kalar baki a yanzu (Dark Mode)
+        if (body.classList.contains('dark-theme')) {
             // MAYAR DA SHI FARI (LIGHT MODE)
-            body.classList.replace('bg-gray-900', 'bg-gray-100');
-            body.classList.replace('text-gray-100', 'text-gray-900');
+            body.classList.remove('dark-theme');
             button.innerHTML = "🌙"; // Alamar Wata
-            
-            // Mayar da katunan darussa fari
-            cards.forEach(card => {
-                card.classList.replace('bg-gray-800', 'bg-white');
-                card.classList.remove('text-gray-200');
-            });
-            
-            // Ajiye zabin a wayar mutum (Domin idan ya dawo gobe ya ganshi yadda ya bari)
             localStorage.setItem('theme', 'light');
-
         } else {
             // MAYAR DA SHI BAKI (DARK MODE)
-            body.classList.replace('bg-gray-100', 'bg-gray-900');
-            body.classList.replace('text-gray-900', 'text-gray-100');
+            body.classList.add('dark-theme');
             button.innerHTML = "☀️"; // Alamar Rana
-            
-            // Mayar da katunan darussa baki
-            cards.forEach(card => {
-                card.classList.replace('bg-white', 'bg-gray-800');
-                card.classList.add('text-gray-200');
-            });
-
             localStorage.setItem('theme', 'dark');
         }
     }
 
-    // Wannan zai duba wane zabi mutum ya yi a baya idan ya sake bude shafin
+    // Wannan zai duba zabin da mutum yayi a baya idan ya sake bude shafin
     window.onload = function() {
         if (localStorage.getItem('theme') === 'dark') {
-            canjaKala(); // Kunna Dark Mode kai tsaye
+            document.getElementById('babban-shafi').classList.add('dark-theme');
+            document.getElementById('theme-toggle').innerHTML = "☀️";
         }
     }
 </script>
