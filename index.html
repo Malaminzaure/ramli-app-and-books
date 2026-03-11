@@ -29,10 +29,19 @@
     <header class="bg-blue-700 text-white sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-2 py-2">
 
-            <!-- SITE TITLE (Na rage girmansa kadan don ya bada fili) -->
-            <h1 class="text-lg md:text-2xl font-bold text-center mb-2">
-                DARUSSAN MALAMIN ZAURE
-            </h1>
+
+<!-- SITE TITLE & DARK MODE TOGGLE -->
+            <div class="flex justify-between items-center mb-2 px-2">
+                <div class="w-8"></div> <!-- Fili don ya raba tsakiya daidai -->
+                <h1 class="text-lg md:text-2xl font-bold text-center">
+                    DARUSSAN MALAMIN ZAURE
+                </h1>
+                <!-- BUTTON NA DARK MODE -->
+                <button onclick="canjaKala()" id="theme-toggle" class="p-2 rounded-full bg-blue-800 hover:bg-blue-600 transition text-xl shadow-inner">
+                    🌙
+                </button>
+            </div>
+            
 
             <!-- BUTTONS CONTAINER (Grid System: Kafa-da-Kafa) -->
             <div class="grid grid-cols-2 gap-2">
