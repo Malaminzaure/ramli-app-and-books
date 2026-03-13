@@ -2405,8 +2405,9 @@ class="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full sha
     // Wannan zai fara aiki da zaran shafin ya gama budewa
     document.addEventListener("DOMContentLoaded", function() {
         
-        // 1. Kamo duk katunan darussa dake cikin shafin
-        const darussa = document.querySelectorAll('.bg-white.p-6.rounded-xl.shadow-md');
+    
+        // 1. Kamo duk katunan darussa dake cikin shafin (Ko wane irin tsari ne da shi matukar Fari ne kuma yana da Inuwa)
+const darussa = document.querySelectorAll('.bg-white.shadow-md, .bg-white.shadow-lg');
         
         // 2. Zagaya su daya bayan daya don saka musu Views da Likes
         darussa.forEach((darasi, index) => {
