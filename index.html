@@ -245,32 +245,6 @@ class="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full sha
     <p class="text-gray-700 leading-relaxed">
         Ana neman madalibi akasan in yayi tafiya mai kyau sannan yasauka a gida mai kyau to bukata zatabiya in sha allahu.
     </p>
-
-    <!-- ... nan saman akwai rubutun darasin ... -->
-
-        <!-- VIEWS DA LIKES SECTION -->
-        <div id="darasi-1" data-date="2026-03-01" data-base-views="1200" data-base-likes="345" class="mt-4 pt-3 border-t border-gray-200 flex justify-between items-center text-sm font-bold text-gray-500 post-stats">
-            
-            <!-- Alamar Ido (Views) -->
-            <div class="flex items-center gap-1.5 hover:text-blue-600 transition cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span class="view-count">...</span>
-            </div>
-
-            <!-- Alamar Zuciya (Likes) -->
-            <div onclick="dannaLike('darasi-1')" class="like-button flex items-center gap-1.5 hover:text-rose-600 transition cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 heart-icon text-gray-400">
-                  <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-                </svg>
-                <span class="like-count">...</span>
-            </div>
-
-        </div>
-        <!-- KARSHEN VIEWS DA LIKES -->
-</div> <!-- Karshen darasin -->
 </div>
 
 <!-- DARASI 93: Sakon da Aka Tura -->
@@ -2426,74 +2400,91 @@ class="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full sha
 </script>
 
 
-                        <!-- SCRIPT NA VIEWS DA LIKES (KWARARRU) -->
+        <!-- SCRIPT NA VIEWS DA LIKES (MAI SAKA KANSA A KOWANE DARASI) -->
 <script>
-    // Wannan function din yana lissafa adadin Views da Likes kowace rana
-    function lissafaStats() {
-        const posts = document.querySelectorAll('.post-stats');
-        const yau = new Date(); // Ranar yau
-
-        posts.forEach(post => {
-            const postId = post.id;
-            // Dauko ranar da aka sa darasin, da asalin views da likes daga HTML
-            const postDate = new Date(post.getAttribute('data-date'));
-            const baseViews = parseInt(post.getAttribute('data-base-views'));
-            const baseLikes = parseInt(post.getAttribute('data-base-likes'));
-
-            // Lissafa kwanaki nawa suka wuce tun da aka sa darasin
-            const kwanaki = Math.floor((yau - postDate) / (1000 * 60 * 60 * 24));
+    // Wannan zai fara aiki da zaran shafin ya gama budewa
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // 1. Kamo duk katunan darussa dake cikin shafin
+        const darussa = document.querySelectorAll('.bg-white.p-6.rounded-xl.shadow-md');
+        
+        // 2. Zagaya su daya bayan daya don saka musu Views da Likes
+        darussa.forEach((darasi, index) => {
             
-            // In kwanaki sun yi negative (wato ranar bata zo ba), mu sa 0
-            const kwanakinDaSukaWuce = kwanaki > 0 ? kwanaki : 0;
-
-            // Tsarin Karuwa: Kowace rana +14 Views da +3 Likes
-            let currentViews = baseViews + (kwanakinDaSukaWuce * 14);
-            let currentLikes = baseLikes + (kwanakinDaSukaWuce * 3);
-
-            // Duba ko wannan mutumin ya taba yin Like a wayarsa (Local Storage)
+            // Bawa kowane darasi Lamba (ID) ta musamman (Misali: post-1, post-2)
+            const postId = 'darasi-' + index;
+            darasi.id = postId;
+            
+            // Lissafin Kwararru: Bawa kowane darasi adadin mutane daban-daban (amma ba zai canja ba in an yi refresh)
+            const baseViews = 500 + ((index * 47) % 1500); // Zai bayar tsakanin 500 zuwa 2000 views
+            const baseLikes = 50 + ((index * 13) % 400);   // Zai bayar tsakanin 50 zuwa 450 likes
+            
+            // Lissafin kwanaki don karawa kullum
+            const postDate = new Date('2026-03-01');
+            const yau = new Date();
+            const kwanaki = Math.max(0, Math.floor((yau - postDate) / (1000 * 60 * 60 * 24)));
+            
+            let currentViews = baseViews + (kwanaki * 14);
+            let currentLikes = baseLikes + (kwanaki * 3);
+            
+            // Duba ko mutum ya taba yin Like a wannan darasin
             const yaYiLike = localStorage.getItem('liked_' + postId);
+            let heartColor = 'text-gray-400'; // Kalar toka (Bai yi like ba)
             
             if (yaYiLike === 'true') {
-                currentLikes += 1; // Idan ya yi like, kara daya a kan lissafin
-                post.querySelector('.heart-icon').classList.replace('text-gray-400', 'text-rose-500');
+                currentLikes += 1;
+                heartColor = 'text-rose-500'; // Kalar ja (Yayi like)
             }
 
-            // Tsara lambar tayi kyau (Misali: 1,200 maimakon 1200)
-            post.querySelector('.view-count').innerText = currentViews.toLocaleString() + ' Views';
-            post.querySelector('.like-count').innerText = currentLikes.toLocaleString();
+            // 3. CODE DIN DA ZAI SHUKA KANSA A KASAN KOWANE DARASI
+            const statsHTML = `
+                <div class="mt-4 pt-3 border-t border-gray-200 flex justify-between items-center text-sm font-bold text-gray-500 transition-colors duration-300">
+                    <!-- Ido -->
+                    <div class="flex items-center gap-1.5 hover:text-blue-600 transition cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span>${currentViews.toLocaleString()} Views</span>
+                    </div>
+                    <!-- Zuciya -->
+                    <div onclick="dannaLikeJS('${postId}')" class="flex items-center gap-1.5 hover:text-rose-600 transition cursor-pointer">
+                        <svg id="heart-${postId}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 transition-transform duration-200 ${heartColor}">
+                          <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                        </svg>
+                        <span id="like-count-${postId}">${currentLikes.toLocaleString()}</span>
+                    </div>
+                </div>
+            `;
+            
+            // Dasa code din a kasan darasin
+            darasi.insertAdjacentHTML('beforeend', statsHTML);
         });
-    }
+    });
 
-    // Aikin danna Like
-    function dannaLike(postId) {
+    // 4. Aikin danna Like (Yana nan yadda yake)
+    function dannaLikeJS(postId) {
         const yaYiLike = localStorage.getItem('liked_' + postId);
-        const post = document.getElementById(postId);
-        const likeSpan = post.querySelector('.like-count');
-        const heartIcon = post.querySelector('.heart-icon');
+        const likeSpan = document.getElementById('like-count-' + postId);
+        const heartIcon = document.getElementById('heart-' + postId);
         let currentLikes = parseInt(likeSpan.innerText.replace(/,/g, ''));
 
         if (yaYiLike !== 'true') {
-            // Idan bai taba like ba yanzu ya danna
             currentLikes += 1;
             localStorage.setItem('liked_' + postId, 'true');
-            heartIcon.classList.replace('text-gray-400', 'text-rose-500');
+            heartIcon.classList.remove('text-gray-400');
+            heartIcon.classList.add('text-rose-500');
             
-            // Kara 'yar motsi (animation) a zuciyar
             heartIcon.style.transform = "scale(1.3)";
             setTimeout(() => { heartIcon.style.transform = "scale(1)"; }, 200);
-            
         } else {
-            // Idan yana so ya cire Like dinsa (Unlike)
             currentLikes -= 1;
             localStorage.setItem('liked_' + postId, 'false');
-            heartIcon.classList.replace('text-rose-500', 'text-gray-400');
+            heartIcon.classList.remove('text-rose-500');
+            heartIcon.classList.add('text-gray-400');
         }
-
         likeSpan.innerText = currentLikes.toLocaleString();
     }
-
-    // Fara aikin da zaran shafin ya bude
-    document.addEventListener("DOMContentLoaded", lissafaStats);
 </script>
 
 </body>
