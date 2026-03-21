@@ -292,12 +292,17 @@ class="fixed bottom-55 right-4 bg-green-500 text-white px-5 py-3 rounded-full sh
             Kada ka wahalar da kanka wajen hada wadannan lissafin. Wannan gajeren bidiyon zai nuna maka yadda <strong>Application dinmu na Hisabi/Ramli</strong> yake fitar da hukunci da kansa cikin sakan daya!
         </p>
         
-        <!-- WURIN BIDIYO -->
-        <div class="mb-6 relative group">
-            <!-- Tabbatar kin dora bidiyon mai suna bincike.mp4 a folder na hotuna a GitHub -->
-            <video controls class="w-full md:w-3/4 mx-auto rounded-lg shadow-2xl border-4 border-yellow-500 bg-black">
-                <source src="hotuna/bincike.mp4" type="video/mp4">
-                Wayarka ba ta goyon bayan wannan bidiyon.
+        <!-- WURIN BIDIYO (GYARARREN TSARI MAI TILASTAWA WURIN BUDEWA) -->
+        <div class="mb-6 relative group w-full overflow-hidden" style="aspect-ratio: 16/9;">
+            <video controls playsinline preload="auto" poster="hotuna/apphisabi.png" class="w-full h-full object-cover rounded-lg shadow-2xl border-4 border-yellow-500 bg-black">
+                <!-- An sa nau'in bidiyo daban-daban don kowace irin waya ta gane shi -->
+                <source src="hotuna/bincike.mp4" type="video/mp4" />
+                <source src="hotuna/bincike.webm" type="video/webm" />
+                <!-- Sakon da zai fito in wayar ta ki budewa -->
+                <div class="text-white p-4 border border-red-500 rounded bg-red-900">
+                    Kayi hakuri, wayarka ba ta goyon bayan wannan bidiyon. 
+                    <a href="hotuna/bincike.mp4" target="_blank" class="text-yellow-400 underline">Danna nan don saukewa (Download) ka kalla a wayarka.</a>
+                </div>
             </video>
         </div>
 
