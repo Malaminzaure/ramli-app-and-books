@@ -406,7 +406,48 @@ class="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full sha
 </div>
 
 
-       
+
+
+    <!-- SCRIPT NA KERA LISSAFIN SHAFUKA DA KANSA (AUTO-PAGINATION) -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // =========================================================
+        // NAN ZAKI RIKA CANJAWA IDAN KIN BUDE SABON SHAFI (Misali yanzu 13 ne)
+        const JIMILLAR_SHAFUKA = 13; 
+        // =========================================================
+
+        const dropdown = document.getElementById('auto-page-jumper');
+        if (!dropdown) return;
+
+        const shafukanFarko = [
+            "index.html", "shafi-na-biyu.html", "shafi-na-uku.html", "shafi-na-hudu.html", 
+            "shafi-na-biyar.html", "shafi-na-shida.html", "shafi-na-bakwai.html", 
+            "shafi-na-takwas.html", "shafi-na-tara.html", "shafi-na-goma.html"
+        ];
+
+        let optionsHTML = '<option value="">-- Zabi Shafi --</option>';
+        const shafinDaMukeCiki = window.location.pathname.split('/').pop() || 'index.html';
+
+        for (let i = 1; i <= JIMILLAR_SHAFUKA; i++) {
+            let linkDinShafi = "";
+            let sunanShafi = "Shafi na " + i;
+
+            if (i <= 10) {
+                linkDinShafi = shafukanFarko[i - 1];
+            } else {
+                linkDinShafi = "shafi-" + i + ".html";
+            }
+
+            let isSelected = (shafinDaMukeCiki === linkDinShafi) ? "selected" : "";
+            if (isSelected) { sunanShafi += " (A nan kake)"; }
+
+            optionsHTML += `<option value="${linkDinShafi}" ${isSelected}>${sunanShafi}</option>`;
+        }
+
+        dropdown.innerHTML = optionsHTML;
+    });
+</script>
         
         
 
