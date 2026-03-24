@@ -271,6 +271,58 @@
 
         </div>
 
+
+
+<!-- SCRIPT NA KERA LISSAFIN SHAFUKA DA KANSA (AUTO-PAGINATION) -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // -------------------------------------------------------------
+        // DUK RANDA KIKA BUDE SABON SHAFI, NAN KAWAI ZAKI CANJA!
+        const JIMILLAR_SHAFUKA = 12; // Yanzu muna da shafi 12 kenan
+        // -------------------------------------------------------------
+
+        const dropdown = document.getElementById('auto-page-jumper');
+        if (!dropdown) return;
+
+        // Jerin sunayen shafukan mu 10 na farko da basa amfani da lamba
+        const shafukanFarko = [
+            "index.html", "shafi-na-biyu.html", "shafi-na-uku.html", "shafi-na-hudu.html", 
+            "shafi-na-biyar.html", "shafi-na-shida.html", "shafi-na-bakwai.html", 
+            "shafi-na-takwas.html", "shafi-na-tara.html", "shafi-na-goma.html"
+        ];
+
+        let optionsHTML = '<option value="">-- Zabi Shafi --</option>';
+        const shafinDaMukeCiki = window.location.pathname.split('/').pop() || 'index.html';
+
+        // Loop: Lissafa daga 1 har zuwa adadin shafukan da muka sa a sama
+        for (let i = 1; i <= JIMILLAR_SHAFUKA; i++) {
+            let linkDinShafi = "";
+            let sunanShafi = "Shafi na " + i;
+
+            // Idan shafin yana kasa da 11, dauko sunan daga lissafin farko
+            if (i <= 10) {
+                linkDinShafi = shafukanFarko[i - 1];
+            } else {
+                // Idan ya haura 10, amfani da sabon tsarin lambobi (shafi-11.html, shafi-100.html)
+                linkDinShafi = "shafi-" + i + ".html";
+            }
+
+            // Idan wannan shine shafin da muke ciki yanzu, sa masa alamar (A nan kake)
+            let isSelected = (shafinDaMukeCiki === linkDinShafi) ? "selected" : "";
+            if (isSelected) { sunanShafi += " (A nan kake)"; }
+
+            optionsHTML += `<option value="${linkDinShafi}" ${isSelected}>${sunanShafi}</option>`;
+        }
+
+        // Zuba duka lissafin a cikin akwatin da ke shafin
+        dropdown.innerHTML = optionsHTML;
+    });
+</script>
+
+
+        
+
         <!-- MEGA BANNER (TALLAN APP DA LITTATTAFAI) -->
         <div class="my-12 bg-gradient-to-br from-blue-900 via-indigo-900 to-black rounded-2xl shadow-2xl p-6 md:p-10 border-4 border-yellow-500 relative overflow-hidden">
             <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-yellow-500 rounded-full opacity-20 blur-2xl"></div>
@@ -291,17 +343,18 @@
             </div>
         </div>
 
-        <!-- BUTTONS NA RABA SHAFUKA (Shafi na 11 baya zuwa 12 a yanzu tunda shine a karshe a list dinki) -->
-        <div class="flex justify-center items-center space-x-2 my-10 text-sm md:text-base">
-            <a href="shafi-11.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md">⬅ Baya</a>
-            <a href="shafi-11.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200">11</a>
-            <span class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold shadow-md">12</span>
-            <a href="shafi-13.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200">13</a>
-            <a href="shafi-14.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200">14</a>
-            <a href="shafi-13.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md">Gaba ➡</a>
+
+<!-- AKWATIN ZABEN SHAFI MAI AIKI DA KANSA (AUTO-DROPDOWN) -->
+        <div class="flex items-center justify-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 my-4">
+            <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Tsallaka zuwa Shafi:</label>
+            
+            <!-- JavaScript zai zuba jerin shafukan a cikin wannan akwatin da kansa -->
+            <select id="auto-page-jumper" onchange="window.location.href=this.value" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white font-bold cursor-pointer outline-none">
+                <option value="">Lissafin shafuka yana loding...</option>
+            </select>
         </div>
 
-    </div>
+        
 
     <!-- FOOTER -->
     <footer class="text-center p-10 text-gray-500 bg-gray-200 mt-10">
