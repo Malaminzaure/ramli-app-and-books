@@ -281,27 +281,41 @@
        
 
 
-   <!-- BUTTONS NA SHAFI NA 11 (SABON TSARI MAI LAMBOBI BIYU A GABA) -->
-<div class="flex justify-center items-center space-x-2 my-10 text-sm md:text-base">
-    <!-- Maballin Baya zuwa Shafi na 10 -->
-    <a href="shafi-na-goma.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md">⬅ Baya</a>
-    
-    <!-- Lambar Shafi na 10 -->
-    <a href="shafi-na-goma.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200">10</a>
-    
-    <!-- SHAFI NA YANZU (11) -->
-    <span class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold shadow-md">11</span>
-    
-    <!-- Lambar Shafi na 12 (Shafin Gaba na Farko) -->
-    <a href="shafi-12.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200">12</a>
-    
-    <!-- Lambar Shafi na 13 (Shafin Gaba na Biyu) -->
-    <a href="shafi-13.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200">13</a>
-    
-    <!-- Maballin Gaba (Zai kai mu Shafi na 12) -->
-    <a href="shafi-12.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md">Gaba ➡</a>
-</div>
+  <!-- BUTTONS NA RABA SHAFUKA (DA TSARIN TSALLAKAWA ZUWA WANI SHAFI) -->
+        <div class="flex flex-col items-center justify-center my-10 space-y-4">
+            
+            <!-- BUTTONS DIN GABA DA BAYA (Yana nan yadda yake) -->
+            <div class="flex justify-center items-center space-x-2 text-sm md:text-base">
+                <a href="shafi-na-goma.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md transition">⬅ Baya</a>
+                <a href="shafi-na-goma.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200 transition">10</a>
+                <span class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold shadow-md">11</span>
+                <a href="shafi-12.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200 transition">12</a>
+                <a href="shafi-13.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200 transition">13</a>
+                <a href="shafi-12.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md transition">Gaba ➡</a>
+            </div>
 
+            <!-- SABON TSARI: TSALLAKA ZUWA WANI SHAFI -->
+            <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+                <label for="page-jumper" class="text-sm font-bold text-gray-700 dark:text-gray-300">Tsallaka zuwa Shafi:</label>
+                <select id="page-jumper" onchange="window.location.href=this.value" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white font-bold cursor-pointer outline-none">
+                    <option value="">Zabi...</option>
+                    <option value="index.html">Shafi na 1</option>
+                    <option value="shafi-na-biyu.html">Shafi na 2</option>
+                    <option value="shafi-na-uku.html">Shafi na 3</option>
+                    <option value="shafi-na-hudu.html">Shafi na 4</option>
+                    <option value="shafi-na-biyar.html">Shafi na 5</option>
+                    <option value="shafi-na-shida.html">Shafi na 6</option>
+                    <option value="shafi-na-bakwai.html">Shafi na 7</option>
+                    <option value="shafi-na-takwas.html">Shafi na 8</option>
+                    <option value="shafi-na-tara.html">Shafi na 9</option>
+                    <option value="shafi-na-goma.html">Shafi na 10</option>
+                    <option value="shafi-11.html" selected>Shafi na 11 (A nan kake)</option>
+                    <!-- Ana kara sabbin shafuka a nan idan an bude su -->
+                    <option value="shafi-12.html">Shafi na 12 (Sauru)</option>
+                </select>
+            </div>
+
+        </div>
 
  
 
