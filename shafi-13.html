@@ -332,52 +332,115 @@
 
 
 
-  <!-- SCRIPT NA KERA LISSAFIN SHAFUKA DA KANSA (AUTO-PAGINATION) -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        
-        // -------------------------------------------------------------
-        // DUK RANDA KIKA BUDE SABON SHAFI, NAN KAWAI ZAKI CANJA!
-        const JIMILLAR_SHAFUKA = 13; // Yanzu muna da shafi 13 kenan
-        // -------------------------------------------------------------
+<!-- ========================================== -->
+        <!-- PAGINATION: BUTTONS NA SHAFI NA 13 KACAL   -->
+        <!-- ========================================== -->
+        <div class="flex flex-col items-center justify-center my-10 space-y-6">
+            
+            <!-- 1. BUTTONS DIN GABA DA BAYA (Shafi na 13) -->
+            <div class="flex justify-center items-center space-x-2 text-sm md:text-base">
+                <!-- Baya zuwa Shafi na 12 -->
+                <a href="shafi-12.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md transition">⬅ Baya</a>
+                
+                <a href="shafi-12.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200 transition">12</a>
+                
+                <!-- SHAFI NA YANZU (13) MAI SHUDI -->
+                <span class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold shadow-md">13</span>
+                
+                <!-- Gaba zuwa Shafi na 14 -->
+                <a href="shafi-14.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200 transition">14</a>
+                <a href="shafi-15.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200 transition">15</a>
+                
+                <a href="shafi-14.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md transition">Gaba ➡</a>
+            </div>
 
-        const dropdown = document.getElementById('auto-page-jumper');
-        if (!dropdown) return;
+            <!-- 2. AKWATIN ZABEN SHAFI (Dropdown) -->
+            <div class="flex items-center justify-center gap-3 bg-white px-5 py-3 rounded-xl shadow-md border border-gray-200 dark:bg-gray-800 dark:border-gray-700 w-full max-w-sm">
+                <label class="text-sm font-bold text-gray-700 dark:text-gray-300 whitespace-nowrap">Tsallaka Shafi:</label>
+                <select id="auto-page-jumper" onchange="window.location.href=this.value" class="w-full bg-gray-50 border-2 border-blue-200 text-blue-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white font-bold cursor-pointer outline-none transition hover:border-blue-400 shadow-inner">
+                    <option value="">Loding...</option>
+                </select>
+            </div>
 
-        // Jerin sunayen shafukan mu 10 na farko da basa amfani da lamba
-        const shafukanFarko = [
-            "index.html", "shafi-na-biyu.html", "shafi-na-uku.html", "shafi-na-hudu.html", 
-            "shafi-na-biyar.html", "shafi-na-shida.html", "shafi-na-bakwai.html", 
-            "shafi-na-takwas.html", "shafi-na-tara.html", "shafi-na-goma.html"
-        ];
+        </div>
+    </div> <!-- Karshen container -->
 
-        let optionsHTML = '<option value="">-- Zabi Shafi --</option>';
-        const shafinDaMukeCiki = window.location.pathname.split('/').pop() || 'index.html';
+    <!-- FOOTER -->
+    <footer class="text-center p-10 text-gray-500 bg-gray-200 mt-10">
+        &copy; 2026 Ramli Digital. All rights reserved.
+        <p class="text-center text-sm text-gray-600 mt-2 font-bold">
+            <a href="about.html" class="hover:text-blue-600">About Us</a> | 
+            <a href="privacy.html" class="hover:text-blue-600">Privacy Policy</a> | 
+            <a href="terms.html" class="hover:text-blue-600">Terms & Conditions</a> | 
+            <a href="contact.html" class="hover:text-blue-600">Contact Us</a>
+        </p>
+    </footer>
 
-        // Loop: Lissafa daga 1 har zuwa adadin shafukan da muka sa a sama
-        for (let i = 1; i <= JIMILLAR_SHAFUKA; i++) {
-            let linkDinShafi = "";
-            let sunanShafi = "Shafi na " + i;
+    <!-- ========================================== -->
+    <!-- SCRIPT NA KERA LISSAFIN SHAFUKA DA KANSA    -->
+    <!-- (WANNAN SHINE WANDA KIKA MANTA BAKI SA BA!)  -->
+    <!-- ========================================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // NAN ZAKI RIKA CANJAWA IDAN KIN BUDE SABON SHAFI
+            const JIMILLAR_SHAFUKA = 13; // Yanzu mun kai shafi 13!
+            
+            const dropdown = document.getElementById('auto-page-jumper');
+            if (!dropdown) return;
 
-            // Idan shafin yana kasa da 11, dauko sunan daga lissafin farko
-            if (i <= 10) {
-                linkDinShafi = shafukanFarko[i - 1];
-            } else {
-                // Idan ya haura 10, amfani da sabon tsarin lambobi (shafi-11.html, shafi-100.html)
-                linkDinShafi = "shafi-" + i + ".html";
+            const shafukanFarko = [
+                "index.html", "shafi-na-biyu.html", "shafi-na-uku.html", "shafi-na-hudu.html", 
+                "shafi-na-biyar.html", "shafi-na-shida.html", "shafi-na-bakwai.html", 
+                "shafi-na-takwas.html", "shafi-na-tara.html", "shafi-na-goma.html"
+            ];
+
+            let optionsHTML = '<option value="">-- Zabi Shafi --</option>';
+            const shafinDaMukeCiki = window.location.pathname.split('/').pop() || 'index.html';
+
+            for (let i = 1; i <= JIMILLAR_SHAFUKA; i++) {
+                let linkDinShafi = "";
+                let sunanShafi = "Shafi na " + i;
+
+                if (i <= 10) {
+                    linkDinShafi = shafukanFarko[i - 1];
+                } else {
+                    linkDinShafi = "shafi-" + i + ".html";
+                }
+
+                let isSelected = (shafinDaMukeCiki === linkDinShafi) ? "selected" : "";
+                if (isSelected) { sunanShafi += " (A nan kake)"; }
+
+                optionsHTML += `<option value="${linkDinShafi}" ${isSelected}>${sunanShafi}</option>`;
             }
+            dropdown.innerHTML = optionsHTML;
+        });
+    </script>
 
-            // Idan wannan shine shafin da muke ciki yanzu, sa masa alamar (A nan kake)
-            let isSelected = (shafinDaMukeCiki === linkDinShafi) ? "selected" : "";
-            if (isSelected) { sunanShafi += " (A nan kake)"; }
-
-            optionsHTML += `<option value="${linkDinShafi}" ${isSelected}>${sunanShafi}</option>`;
+    <!-- SCRIPT NA DARK MODE -->
+    <script>
+        function canjaKala() {
+            const body = document.getElementById('babban-shafi');
+            const button = document.getElementById('theme-toggle');
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                button.innerHTML = "🌙"; 
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-theme');
+                button.innerHTML = "☀️"; 
+                localStorage.setItem('theme', 'dark');
+            }
         }
-
-        // Zuba duka lissafin a cikin akwatin da ke shafin
-        dropdown.innerHTML = optionsHTML;
-    });
-</script>      
+        window.onload = function() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.getElementById('babban-shafi').classList.add('dark-theme');
+                document.getElementById('theme-toggle').innerHTML = "☀️";
+            }
+        }
+    </script>
+</body>
+</html>
 
 
 
