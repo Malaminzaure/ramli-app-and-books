@@ -308,42 +308,7 @@
             }
         });
 
-        // 3. Auto-Pagination Script
-        const JIMILLAR_SHAFUKA = 14; // Tun da yanzu muna shafi na 14
-        const SHAFI_NA_YANZU = 14; // Shafi na 14
-        const paginationContainer = document.getElementById('pagination-container');
-
-        let selectOptions = '';
-        for(let i = 1; i <= JIMILLAR_SHAFUKA; i++) {
-            let shafiURL = i === 1 ? 'index.html' : `shafi-${i}.html`;
-            let selected = i === SHAFI_NA_YANZU ? 'selected' : '';
-            selectOptions += `<option value="${shafiURL}" ${selected}>Shafi na ${i}</option>`;
-        }
-
-        let prevBtn = SHAFI_NA_YANZU > 1 
-            ? `<a href="${SHAFI_NA_YANZU - 1 === 1 ? 'index.html' : 'shafi-'+(SHAFI_NA_YANZU - 1)+'.html'}" class="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md transition"><i class="fa-solid fa-arrow-right mr-1"></i> Baya</a>` 
-            : `<button disabled class="px-4 py-2 bg-gray-300 dark:bg-gray-700 text-gray-500 cursor-not-allowed rounded-md">Baya</button>`;
-
-        let nextBtn = SHAFI_NA_YANZU < JIMILLAR_SHAFUKA 
-            ? `<a href="shafi-${SHAFI_NA_YANZU + 1}.html" class="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md transition">Gaba <i class="fa-solid fa-arrow-left ml-1"></i></a>` 
-            : `<button disabled class="px-4 py-2 bg-gray-300 dark:bg-gray-700 text-gray-500 cursor-not-allowed rounded-md">Gaba</button>`; // Canza wannan idan kun kara shafi-15
-
-        paginationContainer.innerHTML = `
-            ${prevBtn}
-            <div class="flex items-center">
-                <span class="mr-2 text-gray-700 dark:text-gray-300">Tsalle zuwa:</span>
-                <select id="page-jump" class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 cursor-pointer">
-                    ${selectOptions}
-                </select>
-            </div>
-            ${nextBtn}
-        `;
-
-        document.getElementById('page-jump').addEventListener('change', function(e) {
-            window.location.href = e.target.value;
-        });
-
-    </script>
+      
 </body>
 </html>
 
@@ -443,28 +408,6 @@
 
         
 
-    <!-- SCRIPT NA DARK MODE -->
-    <script>
-        function canjaKala() {
-            const body = document.getElementById('babban-shafi');
-            const button = document.getElementById('theme-toggle');
-            if (body.classList.contains('dark-theme')) {
-                body.classList.remove('dark-theme');
-                button.innerHTML = "🌙"; 
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.classList.add('dark-theme');
-                button.innerHTML = "☀️"; 
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-        window.onload = function() {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.getElementById('babban-shafi').classList.add('dark-theme');
-                document.getElementById('theme-toggle').innerHTML = "☀️";
-            }
-        }
-    </script>
 </body>
 </html>
 
