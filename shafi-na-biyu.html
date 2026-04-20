@@ -391,36 +391,23 @@ class="fixed bottom-55 right-4 bg-green-500 text-white px-5 py-3 rounded-full sh
 
 
 
-<!-- BUTTONS NA RABA SHAFUKA (DA TSARIN TSALLAKAWA ZUWA WANI SHAFI) -->
-        <div class="flex flex-col items-center justify-center my-10 space-y-6">
+<!-- BUTTONS NA SHAFI (NEXT/BACK KAWAI) -->
+        <div class="flex justify-between items-center my-10 px-4 md:px-0">
+            <!-- A KOWANE SHAFI, WANNAN SHINE ZAKA CANZA DON YA KOMA SHAFI NA BAYA -->
+            <a href="shafi-na-goma.html" class="px-4 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-lg transition flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                Baya
+            </a>
             
-            <!-- 1. BUTTONS DIN GABA DA BAYA (Kamar Yadda Kike So Su Fito) -->
-            <div class="flex justify-center items-center space-x-2 text-sm md:text-base">
-                <!-- Baya zuwa Shafi na 11 -->
-                <a href="shafi-11.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md transition">⬅ Baya</a>
-                
-                <!-- Lambar Baya (11) -->
-                <a href="shafi-11.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200 transition">11</a>
-                
-                <!-- SHAFI NA YANZU (12) -->
-                <span class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold shadow-md">12</span>
-                
-                <!-- Lambar Gaba (13) -->
-                <a href="shafi-13.html" class="px-3 py-2 md:px-4 rounded-md bg-white text-blue-600 font-bold hover:bg-blue-100 shadow border border-gray-200 transition">13</a>
-                
-                <!-- Gaba zuwa Shafi na 13 -->
-                <a href="shafi-13.html" class="px-3 py-2 md:px-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-md transition">Gaba ➡</a>
-            </div>
-
-            <!-- 2. AKWATIN ZABEN SHAFI (Yana Karkashin Buttons Din) -->
-            <div class="flex items-center justify-center gap-3 bg-white px-5 py-3 rounded-xl shadow-md border border-gray-200 dark:bg-gray-800 dark:border-gray-700 w-full max-w-sm">
-                <label class="text-sm font-bold text-gray-700 dark:text-gray-300 whitespace-nowrap">Tsallaka Shafi:</label>
-                <!-- Wannan shine Injin zaben shafin -->
-                <select id="auto-page-jumper" onchange="window.location.href=this.value" class="w-full bg-gray-50 border-2 border-blue-200 text-blue-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white font-bold cursor-pointer outline-none transition hover:border-blue-400 shadow-inner">
-                    <option value="">Loding...</option>
-                </select>
-            </div>
-
+            <!-- A KOWANE SHAFI, WANNAN SHINE ZAKA CANZA DON YA KOMA SHAFI NA GABA -->
+            <a href="shafi-12.html" class="px-4 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-lg transition flex items-center gap-2">
+                Gaba
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+            </a>
         </div>
 
 
@@ -445,47 +432,6 @@ class="fixed bottom-55 right-4 bg-green-500 text-white px-5 py-3 rounded-full sh
 
 
 
-
-<!-- SCRIPT NA KERA LISSAFIN SHAFUKA DA KANSA (AUTO-PAGINATION) -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        
-        // =========================================================
-        // NAN ZAKI RIKA CANJAWA IDAN KIN BUDE SABON SHAFI (Misali yanzu 13 ne)
-        const JIMILLAR_SHAFUKA = 13; 
-        // =========================================================
-
-        const dropdown = document.getElementById('auto-page-jumper');
-        if (!dropdown) return;
-
-        const shafukanFarko = [
-            "index.html", "shafi-na-biyu.html", "shafi-na-uku.html", "shafi-na-hudu.html", 
-            "shafi-na-biyar.html", "shafi-na-shida.html", "shafi-na-bakwai.html", 
-            "shafi-na-takwas.html", "shafi-na-tara.html", "shafi-na-goma.html"
-        ];
-
-        let optionsHTML = '<option value="">-- Zabi Shafi --</option>';
-        const shafinDaMukeCiki = window.location.pathname.split('/').pop() || 'index.html';
-
-        for (let i = 1; i <= JIMILLAR_SHAFUKA; i++) {
-            let linkDinShafi = "";
-            let sunanShafi = "Shafi na " + i;
-
-            if (i <= 10) {
-                linkDinShafi = shafukanFarko[i - 1];
-            } else {
-                linkDinShafi = "shafi-" + i + ".html";
-            }
-
-            let isSelected = (shafinDaMukeCiki === linkDinShafi) ? "selected" : "";
-            if (isSelected) { sunanShafi += " (A nan kake)"; }
-
-            optionsHTML += `<option value="${linkDinShafi}" ${isSelected}>${sunanShafi}</option>`;
-        }
-
-        dropdown.innerHTML = optionsHTML;
-    });
-</script>
 
 
 
