@@ -345,29 +345,7 @@
         </p>
     </footer>
 
-    <!-- SCRIPT NA ZABEN SHAFI -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const JIMILLAR_SHAFUKA = 13; 
-            const dropdown = document.getElementById('auto-page-jumper');
-            if (!dropdown) return;
-            const shafukanFarko = ["index.html", "shafi-na-biyu.html", "shafi-na-uku.html", "shafi-na-hudu.html", "shafi-na-biyar.html", "shafi-na-shida.html", "shafi-na-bakwai.html", "shafi-na-takwas.html", "shafi-na-tara.html", "shafi-na-goma.html"];
-            let optionsHTML = '<option value="">-- Zabi Shafi --</option>';
-            const shafinDaMukeCiki = window.location.pathname.split('/').pop() || 'index.html';
-            for (let i = 1; i <= JIMILLAR_SHAFUKA; i++) {
-                let linkDinShafi = (i <= 10) ? shafukanFarko[i - 1] : "shafi-" + i + ".html";
-                let sunanShafi = "Shafi na " + i;
-                let isSelected = (shafinDaMukeCiki === linkDinShafi) ? "selected" : "";
-                if (isSelected) { sunanShafi += " (A nan kake)"; }
-                optionsHTML += `<option value="${linkDinShafi}" ${isSelected}>${sunanShafi}</option>`;
-            }
-            dropdown.innerHTML = optionsHTML;
-        });
-    </script>
-</body>
-</html>        
-
-       
+   
 
 
 
@@ -428,53 +406,6 @@
 
 
 
-
-  <!-- SCRIPT NA KERA LISSAFIN SHAFUKA DA KANSA (AUTO-PAGINATION) -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        
-        // -------------------------------------------------------------
-        // DUK RANDA KIKA BUDE SABON SHAFI, NAN KAWAI ZAKI CANJA!
-        const JIMILLAR_SHAFUKA = 13; // Yanzu muna da shafi 13 kenan
-        // -------------------------------------------------------------
-
-        const dropdown = document.getElementById('auto-page-jumper');
-        if (!dropdown) return;
-
-        // Jerin sunayen shafukan mu 10 na farko da basa amfani da lamba
-        const shafukanFarko = [
-            "index.html", "shafi-na-biyu.html", "shafi-na-uku.html", "shafi-na-hudu.html", 
-            "shafi-na-biyar.html", "shafi-na-shida.html", "shafi-na-bakwai.html", 
-            "shafi-na-takwas.html", "shafi-na-tara.html", "shafi-na-goma.html"
-        ];
-
-        let optionsHTML = '<option value="">-- Zabi Shafi --</option>';
-        const shafinDaMukeCiki = window.location.pathname.split('/').pop() || 'index.html';
-
-        // Loop: Lissafa daga 1 har zuwa adadin shafukan da muka sa a sama
-        for (let i = 1; i <= JIMILLAR_SHAFUKA; i++) {
-            let linkDinShafi = "";
-            let sunanShafi = "Shafi na " + i;
-
-            // Idan shafin yana kasa da 11, dauko sunan daga lissafin farko
-            if (i <= 10) {
-                linkDinShafi = shafukanFarko[i - 1];
-            } else {
-                // Idan ya haura 10, amfani da sabon tsarin lambobi (shafi-11.html, shafi-100.html)
-                linkDinShafi = "shafi-" + i + ".html";
-            }
-
-            // Idan wannan shine shafin da muke ciki yanzu, sa masa alamar (A nan kake)
-            let isSelected = (shafinDaMukeCiki === linkDinShafi) ? "selected" : "";
-            if (isSelected) { sunanShafi += " (A nan kake)"; }
-
-            optionsHTML += `<option value="${linkDinShafi}" ${isSelected}>${sunanShafi}</option>`;
-        }
-
-        // Zuba duka lissafin a cikin akwatin da ke shafin
-        dropdown.innerHTML = optionsHTML;
-    });
-</script>      
 
 
 
