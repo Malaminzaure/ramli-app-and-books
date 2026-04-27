@@ -65,7 +65,10 @@
                 <h1 class="text-lg md:text-2xl font-bold text-center">
                     DARUSSAN MALAMIN ZAURE
                 </h1>
-                
+                <!-- BUTTON NA DARK MODE -->
+                <button onclick="canjaKala()" id="theme-toggle" class="p-2 rounded-full bg-blue-800 hover:bg-blue-600 transition text-xl shadow-inner">
+                    🌙
+                </button>
             </div>
             
 
@@ -116,158 +119,98 @@
 
 
         
-<!DOCTYPE html>
-<html lang="ha" class="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burujin Saratan (Cancer) - Malamin Zaure</title>
-    <meta name="description" content="Cikakken bayani akan Burujin Saratan (Cancer), kaukabinsa Wata, sana'o'in da suka dace, da tasirin shigar rana cikin Saratan.">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        saratan: '#93C5FD', // Light Blue color suitable for Moon/Water
-                        rana: '#F59E0B',  // Amber for the sun
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 font-sans pb-20">
-
-    <!-- Header & Dark Mode Toggle -->
-    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                <i class="fa-solid fa-mosque mr-2"></i> Malamin Zaure
-            </h1>
-            <button id="theme-toggle" class="p-2 bg-gray-200 dark:bg-gray-700 rounded-full focus:outline-none">
-                <i id="theme-icon" class="fa-solid fa-moon text-gray-600 dark:text-yellow-300"></i>
-            </button>
-        </div>
-    </header>
-
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto px-4 mt-8">
-        
-        <!-- Breadcrumb -->
-        <div class="mb-6 text-sm text-gray-500 dark:text-gray-400">
-            <a href="index.html" class="hover:text-blue-600">Gida</a> &raquo; 
-            <span class="text-gray-700 dark:text-gray-300 font-semibold">Burujin Saratan (Cancer)</span>
-        </div>
-
-        <!-- Katin Darasi na 1: Burujin Saratan -->
-        <article class="darasi-card bg-white dark:bg-gray-800 rounded-xl shadow-md border-l-8 border-blue-400 mb-8 overflow-hidden relative" data-darasi-id="saratan-main">
-            <img src="hotuna/saratan.png" alt="Burujin Saratan Cancer" class="w-full h-64 object-cover object-center bg-gray-200 dark:bg-gray-700">
-            <div class="p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Burujin Saratan (Cancer) ♋</h2>
-                
-                <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed space-y-4">
-                    <p>Burujin Saratan shi ne buruji na hudu a lissafin falaki. Wannan buruji yana da matukar muhimmanci domin shi ne uwa a cikin burujai (Mother of the Zodiac). Mutanen wannan burujin suna da matukar tausayi, rikon amana, da kuma son kyautautawa iyalansu da makwabtansu.</p>
-
-                    <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mt-6"><i class="fa-solid fa-water mr-2"></i> Dabi'arsa da Kaukabinsa</h3>
-                    <p><strong>Dabi'arsa:</strong> Ruwa (Water). Kamar yadda ruwa yake mai sanyi da kwantar da hankali amma kuma yana iya yin ambaliya, haka mutanen Saratan suke; suna da sanyin hali amma kuma idan aka taba su suna da zafin kishi da fushi.<br>
-                    <strong>Kaukabinsa:</strong> Wata (Moon). Wata ne yake mulkin wannan buruji, shi ya sa yanayin jin dadi ko bacin ransu yakan sauya lokaci-lokaci kamar yadda wata yake girma ko yake raguwa.</p>
-
-                    <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mt-6"><i class="fa-regular fa-calendar-check mr-2"></i> Ranar Sa'arsa da Dalili</h3>
-                    <p>Ranar sa'ar masu burujin Saratan ita ce <strong>Ranar Litinin</strong>. Dalili a ilimin lissafin kaukabai shine, Litinin ita ce ranar da Kaukabin Wata (Moon) yake gudanar da mulkinsa gadan-gadan. Yin manyan harkoki a wannan ranar yana kara musu haske da karbuwa.</p>
-
-                    <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mt-6"><i class="fa-solid fa-briefcase mr-2"></i> Sana'o'in da Suka Dace</h3>
-                    <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong>Aikin Asibiti da Jinya (Nursing):</strong> Saboda kwarewarsu wajen kula da mutane da tausayi.</li>
-                        <li><strong>Sayar da Abinci da Kayan Gida:</strong> Suna da fasahar hada abinci masu dadi saboda son dangi.</li>
-                        <li><strong>Kasuwancin Filaye da Gidaje (Real Estate):</strong> Tunda suke son gina gida na kansu, suna da sa'a a harkar gidaje.</li>
-                        <li><strong>Harkar Ruwa ko Kifi:</strong> Sana'o'in da suka shafi ruwa suna kawo musu albarka mai yawa.</li>
-                    </ul>
-
-                    <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mt-6"><i class="fa-solid fa-hand-holding-heart mr-2"></i> Sadaka da Turarensa</h3>
-                    <p><strong>Sadaka:</strong> Mafi kyawun sadaka ga masu Saratan ita ce bayar da abinci, madara mai kyau, ko kuma fararen tufafi ga mabukata don samun budin kofofin alheri.<br>
-                    <strong>Turare:</strong> Turaruka masu sanyi irin su 'Misk', 'Rose', da 'Jasmine' suna taimakawa matuka wajen kwantar musu da hankali.</p>
-
-                    <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mt-6"><i class="fa-solid fa-pray mr-2"></i> Addu'o'i da Sirrin Nasara</h3>
-                    <p>Babban sirrin nasarar su shine kiyaye saba wa iyaye da yawan kyauta. Addu'ar da ta fi dacewa da su ita ce yawaita ambaton <strong>"Ya Rahman, Ya Rauf, Ya Wadud"</strong> (Mai yawan jin kai, Mai matukar Tausayi, Mai yawan So/Kauna) don Allah ya kara musu farin jini da kariya.</p>
-                </div>
-                
-                <!-- Injector Target -->
-                <div class="injector-target mt-6 flex items-center justify-between border-t border-gray-200 dark:border-gray-700 pt-4"></div>
-            </div>
-        </article>
-
-        <!-- Katin Darasi na 2: Shigar Rana Cikin Saratan -->
-        <article class="darasi-card bg-white dark:bg-gray-800 rounded-xl shadow-md border-l-8 border-yellow-500 mb-12 overflow-hidden relative" data-darasi-id="saratan-rana">
-            <img src="hotuna/ranasaratan.png" alt="Shigar Rana Cikin Saratan" class="w-full h-56 object-cover object-center bg-gray-200 dark:bg-gray-700">
-            <div class="p-6 md:p-8">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Karin Ilimi: Shigar Rana Cikin Burujin Saratan ☀️</h2>
-                
-                <div class="prose dark:prose-invert max-w-none text-lg leading-relaxed space-y-4">
-                    <p>Rana tana shiga cikin burujin Saratan a tsakanin <strong>21 ga Yuni zuwa 22 ga Yuli</strong> na kowace shekara. Wannan shine lokacin da ake kira (Summer Solstice) a kasashen yamma inda rana ta fi kowane lokaci tsayi, kuma yana haifar da manyan sauye-sauye a halayyar mutane.</p>
-                    
-                    <h3 class="text-lg font-semibold text-yellow-600 dark:text-yellow-400 mt-4">Tasirin Shigar Rana a Saratan:</h3>
-                    <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong>Bunkasar Tausayi da Kaunar Juna:</strong> A wannan kakar, mutane sukan fi son zama da iyalansu, da kyautautawa makusantansu.</li>
-                        <li><strong>Daidaita Tunanin Dan Adam:</strong> Wanda yake cikin damuwa yakan samu nutsuwa a wannan lokacin domin kaukabin wata yana isar da sako na salama.</li>
-                        <li><strong>Kula da Lafiya da Gyaran Gida:</strong> Wannan shine lokaci mafi kyau da ake samun kwarin gwiwar gyara gine-gine da kuma kula da lafiyar jiki (Dieting).</li>
-                    </ul>
-                </div>
-
-                <!-- Injector Target -->
-                <div class="injector-target mt-6 flex items-center justify-between border-t border-gray-200 dark:border-gray-700 pt-4"></div>
-            </div>
-        </article>
-
-       
-
-        </div>
-
-    </main>
-
- 
-</body>
-</html>
-
-
-
-        
-        
-<!-- BUTTONS NA SHAFI (NEXT/BACK KAWAI) -->
-        <div class="flex justify-between items-center my-10 px-4 md:px-0">
-            <!-- BAYA ZUWA SHAFI NA 14 -->
-            <a href="shafi-14.html" class="px-4 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-lg transition flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-                </svg>
-                Baya
-            </a>
+<!-- ================= FARKON DARASIN SARATAN ================= -->
+        <article class="darasi-card bg-white rounded-2xl shadow-lg border-l-8 border-blue-500 overflow-hidden mb-8" data-darasi-id="saratan-full">
+            <!-- Wurin Hoton Saratan -->
+            <img src="hotuna/saratan.png" alt="Burujin Saratan" class="w-full h-64 md:h-80 object-cover bg-gray-200">
             
-            <!-- BABU GABA TUNDA SHINE NA KARSHE -->
-            <div></div>
-        </div>
+            <div class="p-6 md:p-10">
+                <div class="mb-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Darasi na 15</span>
+                    <span class="text-gray-500 text-sm ml-2 font-semibold">Falaki / Burujai</span>
+                </div>
+                
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6 border-b-2 border-gray-100 pb-4">Burujin Saratan (Cancer) ♋</h2>
+                
+                <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+                    
+                    <!-- GABATARWA DA HALAYE -->
+                    <div>
+                        <p class="mb-4">Burujin Saratan shi ne buruji na hudu a cikin jerin burujai. A lissafin ilimin falaki, ana yi wa wannan buruji lakabi da "Uwa" (Mother of the Zodiac) saboda yawan tausayinsu, rikon amana, da kuma nuna kulawa ga duk wanda yake tare da su.</p>
+                        
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3"><i class="fa-solid fa-water text-blue-500 mr-2"></i> Dabi'arsa da Yanayin Halittarsa</h3>
+                        <p><strong>Dabi'ar Saratan Ruwa ne (Water Element).</strong> Kamar yadda ruwa yake da sanyi sannan yake bayar da rayuwa ga kowane tsiro, haka masu burujin Saratan suke da sanyin hali da tausayi. Amma fa a kiyaye! Kamar yadda ruwa yake yin ambaliya ya lalata gari, haka Saratan idan aka taba masa mutuncinsa ko iyalinsa, yana yin fushi mai matukar muni wanda ba a iya rarrashinsa.</p>
+                    </div>
 
+                    <!-- RANAR SA'A -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3"><i class="fa-regular fa-calendar-check text-indigo-500 mr-2"></i> Kaukabinsa da Ranar Sa'arsa</h3>
+                        <p>Kaukabin da ke jujjuya rayuwar Saratan shi ne <strong>Wata (Moon)</strong>. A ilimin falaki, wata ne ke kula da haske cikin duhu, ruwan sama, da sanyin ni'ima. Saboda wata yana canja yanayinsa (yana jinjirin wata, ya cika, ya sake raguwa), su ma masu Saratan yanayin farin cikinsu da bacin ransu yakan canja lokaci zuwa lokaci.</p>
+                        <p class="mt-2 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500"><strong>Sirrin Ranar Sa'a (Litinin):</strong> Ranar Litinin ita ce ranar kaukabin wata. Idan mai wannan burujin yana son neman wani gagarumin alheri, ko zai yi tafiya neman kudi, ko zai kai kudin aure, ko zai nemi alfarma a wurin wani babba, ya zabi ranar Litinin da sassafe, zai ga gagarumar nasara fiye da tunaninsa.</p>
+                    </div>
+
+                    <!-- SANA'O'I -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3"><i class="fa-solid fa-briefcase text-green-500 mr-2"></i> Sana'o'in da Suka Fi Dace Da Su</h3>
+                        <p class="mb-2">Ba kowace sana'a ce take karbar mutum ba. Su masu Saratan, arzikinsu yana buya ne a cikin ayyukan da suka shafi tausayi, kula da mutane, ko ruwa. Ga mafi kyau a garesu:</p>
+                        <ul class="list-disc list-inside space-y-2 ml-4 font-medium">
+                            <li><strong>Sana'ar Abinci ko Gidan Burodi:</strong> Allah yana sa albarka a hannunsu wajen ciyarwa. Duk sana'ar kayan masarufi tana karbarsu sosai.</li>
+                            <li><strong>Harkar Gidaje da Filaye (Real Estate):</strong> Tunda mutane ne masu son gina zuri'a da gida na kansu, suna da sa'a wajen mallakar filaye da gina gidaje.</li>
+                            <li><strong>Aikin Lafiya da Jinya (Medicine/Nursing):</strong> Suna da fasahar kwantar wa marar lafiya hankali fiye da kowa.</li>
+                            <li><strong>Kasuwancin Ruwa ko Kifi:</strong> Duk wani abu da ya shafi ruwan sanyi, kankara, ko kamun kifi.</li>
+                        </ul>
+                    </div>
+
+                    <!-- SADAKA DA FAIDODI -->
+                    <div class="bg-yellow-50 border border-yellow-200 p-5 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-yellow-800 mb-2"><i class="fa-solid fa-hand-holding-heart mr-2"></i> Faidodi, Sadaka, da Kalar Sa'a</h3>
+                        <p>Kalar da ta fi kawo musu sa'a ita ce <strong>Fara (White) ko Kalar Azurfa (Silver)</strong>. Sanya fararen kaya musamman a ranar Litinin yana bude musu kofofin nasara tare da kawar da bakin jini.</p>
+                        <p class="mt-2"><strong>Mafi Kyawun Sadaka:</strong> Don neman biyan bukata ko kariya daga sharrin makiya, ana so mai Saratan ya rika yawan sadaka da <em>Madara, Ruwa mai sanyi, farin kyalle, ko ciyar da marayu</em>. Yin hakan yana wanke dukkan wata kishirwa ta fatara a rayuwarsu.</p>
+                    </div>
+
+                    <!-- ADDU'O'I -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3"><i class="fa-solid fa-pray text-purple-500 mr-2"></i> Addu'o'i da Sirrin Nasararsu</h3>
+                        <p>Babbar hanyar da mai burujin Saratan zai yi arziki cikin sauki ita ce <strong>kyautautawa Iyayensa (musamman Uwa)</strong>. Aljannar su da arzikin su yana karkashin farin cikin iyayensu.</p>
+                        <p class="mt-3"><strong>Addu'ar Zikiri:</strong> Domin samun kariya daga idon mutane da kuma kara farin jini, ya zama dabi'arsu su rika yawaita kiran wadannan Sunayen Allah: <br>
+                        <span class="text-xl font-bold text-blue-700 bg-blue-50 px-4 py-2 rounded-md inline-block mt-3 border border-blue-200 shadow-sm">"Ya Rahman, Ya Ra'uf, Ya Wadud"</span><br>
+                        <span class="text-sm text-gray-500 block mt-1">(Mai yawan jin kai, Mai matukar Tausayi, Mai yawan Kauna). Wannan zai sa mutane su yi ta musu alheri batare da sun wahala ba.</span></p>
+                    </div>
+
+                </div>
+
+                <!-- Injector Target (Wurin da Likes da Views zasu fito) -->
+                <div class="injector-target mt-8 flex items-center justify-between border-t border-gray-200 pt-4"></div>
+            </div>
+        </article>
+
+
+        <!-- ================= KARTIN SHIGAR RANA (KARIN ILIMI) ================= -->
+        <article class="darasi-card bg-white rounded-2xl shadow-lg border-l-8 border-yellow-500 overflow-hidden mb-10" data-darasi-id="saratan-rana">
+            <!-- Wurin Hoton Rana -->
+            <img src="hotuna/ranasaratan.png" alt="Rana a cikin Saratan" class="w-full h-56 object-cover bg-gray-200">
+            
+            <div class="p-6 md:p-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Karin Ilimi: Tasirin Shigar Rana Cikin Burujin Saratan ☀️</h2>
+                
+                <div class="text-lg text-gray-700 space-y-4">
+                    <p>A ilimin lissafin sararin samaniya, Rana tana shiga cikin gidan Saratan a tsakanin <strong>21 ga Yuni zuwa 22 ga Yuli</strong> na kowace shekara. A wannan lokacin ne ake samun mafi tsayin rana a shekara (Summer Solstice).</p>
+                    
+                    <h3 class="text-xl font-bold text-yellow-700 mt-4">Me hakan ke nufi ga Halittar Dan Adam?</h3>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><strong>Kusanci Da Iyali:</strong> A wannan kakar, mutane sukan fi jin son zama da iyalansu. An fi samun yawan ziyarar 'yan uwa a wannan lokaci fiye da kowane wata a shekara.</li>
+                        <li><strong>Bunkasar Kasuwanci:</strong> Duk wani kasuwanci da ya shafi abinci, sayar da gidaje, ko gyaran gida yana samun gagarumin habaka idan rana tana cikin Saratan.</li>
+                        <li><strong>Sanyin Zuciya da Waraka:</strong> Zuciyar da take cike da fushi ko damuwa tana samun salama, sannan lokaci ne mai kyau na samun waraka ga masu jinya.</li>
+                    </ul>
+                </div>
+
+                <!-- Injector Target (Wurin da Likes da Views zasu fito) -->
+                <div class="injector-target mt-8 flex items-center justify-between border-t border-gray-200 pt-4"></div>
+            </div>
+        </article>
+        <!-- ================= KARSHEN DARASIN SARATAN ================= -->
 
         
-
-        
-
-    <footer class="text-center p-10 text-gray-500 bg-gray-200 mt-10">
-        &copy; 2026 Ramli Digital. All rights reserved.
-        <p class="text-center text-sm text-gray-600 mt-2 font-bold">
-            <a href="about.html" class="hover:text-blue-600">About Us</a> | <a href="privacy.html" class="hover:text-blue-600">Privacy Policy</a> | <a href="terms.html" class="hover:text-blue-600">Terms</a> | <a href="contact.html" class="hover:text-blue-600">Contact</a>
-        </p>
-    </footer>
-
-   
-</body>
-</html>
-
         
 
 
@@ -330,7 +273,62 @@
 
 
 
- 
+<!-- BUTTONS NA SHAFI (NEXT/BACK KAWAI) -->
+        <div class="flex justify-between items-center my-10 px-4 md:px-0">
+            <!-- BAYA ZUWA SHAFI NA 12 -->
+            <a href="shafi-12.html" class="px-4 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-lg transition flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                Baya
+            </a>
+            
+            <!-- GABA ZUWA SHAFI NA 14 -->
+            <a href="shafi-14.html" class="px-4 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-lg transition flex items-center gap-2">
+                Gaba
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+            </a>
+        </div>
+
+        
+
+    <footer class="text-center p-10 text-gray-500 bg-gray-200 mt-10">
+        &copy; 2026 Ramli Digital. All rights reserved.
+        <p class="text-center text-sm text-gray-600 mt-2 font-bold">
+            <a href="about.html" class="hover:text-blue-600">About Us</a> | <a href="privacy.html" class="hover:text-blue-600">Privacy Policy</a> | <a href="terms.html" class="hover:text-blue-600">Terms</a> | <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        </p>
+    </footer>
+
+
+        
+
+    <!-- SCRIPT NA DARK MODE -->
+    <script>
+        function canjaKala() {
+            const body = document.getElementById('babban-shafi');
+            const button = document.getElementById('theme-toggle');
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                button.innerHTML = "🌙"; 
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-theme');
+                button.innerHTML = "☀️"; 
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        window.onload = function() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.getElementById('babban-shafi').classList.add('dark-theme');
+                document.getElementById('theme-toggle').innerHTML = "☀️";
+            }
+        }
+    </script>
+</body>
+</html>
+
 
 
 
