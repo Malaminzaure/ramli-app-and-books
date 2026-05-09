@@ -8,26 +8,34 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Font mai kyau don Larabci da Kwarjini -->
+    <!-- Font mai kyau don Larabci -->
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        .arabic-text {
-            font-family: 'Amiri', serif;
-        }
-        /* Boye abubuwan da ba a bukata a VIP */
-        body {
-            user-select: none; /* Kare kwasar rubutu (Copy protection) */
-        }
+        .arabic-text { font-family: 'Amiri', serif; }
+        /* Boye kwasar rubutu a VIP */
+        body { user-select: none; }
+        /* Tsarin dugon Ramli */
+        .dot { @apply block w-3 h-3 md:w-4 md:h-4 bg-gray-800 rounded-full shadow-sm; }
+        .dot-row-1 { @apply flex justify-center; }
+        .dot-row-2 { @apply flex justify-center gap-2 md:gap-3; }
+        .ramli-shape { @apply flex flex-col items-center gap-1 md:gap-1.5 bg-gray-100 p-2 md:p-3 rounded-xl border border-gray-200 shadow-inner; }
     </style>
 </head>
 <body class="bg-gray-100 font-sans leading-relaxed pb-20">
 
-    <!-- HEADER NA MUSAMMAN DON VIP -->
-    <div class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white p-8 shadow-2xl text-center border-b-4 border-yellow-500 relative">
+    <!-- MABALLIN HOME A SAMA TA HAGU -->
+    <div class="absolute top-4 left-4 z-50">
+        <a href="index.html" class="bg-white text-blue-900 px-4 py-2 rounded-full font-bold shadow-lg border-2 border-yellow-400 hover:bg-yellow-100 transition flex items-center gap-2 text-sm md:text-base">
+            <i class="fa-solid fa-house"></i> Gida
+        </a>
+    </div>
+
+    <!-- HEADER NA VIP -->
+    <div class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white pt-16 pb-8 px-6 shadow-2xl text-center border-b-4 border-yellow-500 relative">
         <div class="absolute top-4 right-4 text-yellow-400 opacity-50">
-            <i class="fa-solid fa-lock text-4xl"></i>
+            <i class="fa-solid fa-lock text-3xl md:text-4xl"></i>
         </div>
         <h1 class="text-3xl md:text-5xl font-extrabold text-yellow-400 tracking-wide drop-shadow-md">
             KARATUN RAMLI CIKAKKE
@@ -38,12 +46,12 @@
     </div>
 
     <!-- CONTENT -->
-    <div class="container mx-auto p-4 max-w-4xl mt-8">
+    <div class="container mx-auto p-4 max-w-5xl mt-6">
 
         <!-- Katin Darasi -->
         <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-t-8 border-yellow-500">
             
-            <div class="p-8 md:p-12">
+            <div class="p-6 md:p-12">
                 <div class="text-center mb-10">
                     <span class="bg-red-100 text-red-800 font-bold px-4 py-2 rounded-full text-sm uppercase tracking-widest"><i class="fa-solid fa-graduation-cap"></i> Mataki na Farko</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mt-4 border-b-2 border-gray-100 pb-4">
@@ -51,13 +59,11 @@
                     </h2>
                 </div>
 
-                <div class="space-y-8 text-gray-800 text-lg md:text-xl leading-relaxed">
+                <div class="space-y-6 text-gray-800 text-lg md:text-xl leading-relaxed">
                     
-                    <!-- GABATARWA DA KA'IDODI 3 -->
                     <p>Ka sani a ilimin Ramli, wannan shi ne matakin farko, kuma daga shi babu wani mataki a bayansa. Da farko dole sai ka san abubuwa guda uku (3) a wannan ilimin:</p>
                     
                     <div class="bg-blue-50 p-6 rounded-xl border border-blue-200 shadow-inner my-6">
-                        <h3 class="text-blue-900 font-bold text-xl mb-4 border-b border-blue-200 pb-2">Muhimman Abubuwa Guda 3 Da Zaka Rike:</h3>
                         <ul class="space-y-4 font-bold">
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-600 text-2xl"></i> 1. Dole sai ka san SUNAN kowane tauraro.</li>
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-600 text-2xl"></i> 2. Dole sai ka san DUGO-DUGON kowane tauraro.</li>
@@ -65,53 +71,268 @@
                         </ul>
                     </div>
 
-                    <p class="font-bold text-gray-700">Da farko, ga sunayensu a jere a kasa daki-daki:</p>
+                    <p class="font-bold text-gray-700 border-b-2 pb-2">Da farko, ga sunayensu da tsarin dugo-dugonsu a jere a kasa daki-daki:</p>
 
-                    <!-- JADAWALI (TABLE) NA TAURARI 16 -->
+                    <!-- JADAWALI MAI DAUKE DA DUGO-DUGO -->
                     <div class="overflow-x-auto my-8 shadow-lg rounded-xl border border-gray-200">
                         <table class="w-full text-left border-collapse bg-white">
                             <thead>
-                                <tr class="bg-blue-900 text-white uppercase tracking-wider text-sm md:text-base">
-                                    <th class="p-4 border-b-2 border-blue-800 text-center w-16">Gida</th>
+                                <tr class="bg-blue-900 text-white uppercase tracking-wider text-xs md:text-sm">
+                                    <th class="p-4 border-b-2 border-blue-800 text-center w-12">No.</th>
+                                    <th class="p-4 border-b-2 border-blue-800 text-center w-24">Dugo-Dugo</th>
                                     <th class="p-4 border-b-2 border-blue-800 text-left">Suna (Hausa)</th>
                                     <th class="p-4 border-b-2 border-blue-800 text-right">Larabci</th>
                                 </tr>
                             </thead>
-                            <tbody class="font-bold text-lg">
-                                <tr class="hover:bg-blue-50 border-b border-gray-100"><td class="p-4 text-center text-red-600 bg-gray-50">1</td><td class="p-4">KAUSAJI</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">كوسجي</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50"><td class="p-4 text-center text-red-600 bg-white">2</td><td class="p-4">RAHIKA</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">ضاحكا</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100"><td class="p-4 text-center text-red-600 bg-gray-50">3</td><td class="p-4">RAYYA</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">رية</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50"><td class="p-4 text-center text-red-600 bg-white">4</td><td class="p-4">BAYADA</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">بياض</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100"><td class="p-4 text-center text-red-600 bg-gray-50">5</td><td class="p-4">DARIKI</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">طريقي</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50"><td class="p-4 text-center text-red-600 bg-white">6</td><td class="p-4">KABLA KARIJA</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">قبل خارجا</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100"><td class="p-4 text-center text-red-600 bg-gray-50">7</td><td class="p-4">HUMRA</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">حمرا</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50"><td class="p-4 text-center text-red-600 bg-white">8</td><td class="p-4">INKIS</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">انکيس</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100"><td class="p-4 text-center text-red-600 bg-gray-50">9</td><td class="p-4">NASARA KARIJA</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">نصر خارجا</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50"><td class="p-4 text-center text-red-600 bg-white">10</td><td class="p-4">ISKAFI</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">اسقاف</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100"><td class="p-4 text-center text-red-600 bg-gray-50">11</td><td class="p-4">IJTIMA'I</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">اجتماعي</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50"><td class="p-4 text-center text-red-600 bg-white">12</td><td class="p-4">NASARA DAKILA</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">نصر داخلا</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100"><td class="p-4 text-center text-red-600 bg-gray-50">13</td><td class="p-4">SA'ILI</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">سائلي</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50"><td class="p-4 text-center text-red-600 bg-white">14</td><td class="p-4">NAKIYYA</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">نقي</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100"><td class="p-4 text-center text-red-600 bg-gray-50">15</td><td class="p-4">ALKALI (KALI DAKILI)</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">القالي</td></tr>
-                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50"><td class="p-4 text-center text-red-600 bg-white">16</td><td class="p-4">JAMA'A</td><td class="p-4 text-right arabic-text text-3xl text-blue-800">جماعة</td></tr>
+                            <tbody class="font-bold text-base md:text-lg align-middle">
+                                
+                                <!-- 1. KAUSAJI -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50">
+                                    <td class="p-4 text-center text-red-600">1</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">KAUSAJI</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">كوسجي</td>
+                                </tr>
+
+                                <!-- 2. RAHIKA -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-white">
+                                    <td class="p-4 text-center text-red-600">2</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">RAHIKA</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">ضاحكا</td>
+                                </tr>
+
+                                <!-- 3. RAYYA -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50">
+                                    <td class="p-4 text-center text-red-600">3</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">RAYYA</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">رية</td>
+                                </tr>
+
+                                <!-- 4. BAYADA -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-white">
+                                    <td class="p-4 text-center text-red-600">4</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">BAYADA</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">بياض</td>
+                                </tr>
+
+                                <!-- 5. DARIKI -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50">
+                                    <td class="p-4 text-center text-red-600">5</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">DARIKI</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">طريقي</td>
+                                </tr>
+
+                                <!-- 6. KABLA KARIJA -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-white">
+                                    <td class="p-4 text-center text-red-600">6</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">KABLA KARIJA</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">قبل خارجا</td>
+                                </tr>
+
+                                <!-- 7. HUMRA -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50">
+                                    <td class="p-4 text-center text-red-600">7</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">HUMRA</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">حمرا</td>
+                                </tr>
+
+                                <!-- 8. INKIS -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-white">
+                                    <td class="p-4 text-center text-red-600">8</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">INKIS</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">انکيس</td>
+                                </tr>
+
+                                <!-- 9. NASARA KARIJA -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50">
+                                    <td class="p-4 text-center text-red-600">9</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">NASARA KARIJA</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">نصر خارجا</td>
+                                </tr>
+
+                                <!-- 10. ISKAFI -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-white">
+                                    <td class="p-4 text-center text-red-600">10</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">ISKAFI</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">اسقاف</td>
+                                </tr>
+
+                                <!-- 11. IJTIMA'I -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50">
+                                    <td class="p-4 text-center text-red-600">11</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">IJTIMA'I</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">اجتماعي</td>
+                                </tr>
+
+                                <!-- 12. NASARA DAKILA -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-white">
+                                    <td class="p-4 text-center text-red-600">12</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">NASARA DAKILA</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">نصر داخلا</td>
+                                </tr>
+
+                                <!-- 13. SA'ILI -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50">
+                                    <td class="p-4 text-center text-red-600">13</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">SA'ILI</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">سائلي</td>
+                                </tr>
+
+                                <!-- 14. NAKIYYA -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-white">
+                                    <td class="p-4 text-center text-red-600">14</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">NAKIYYA</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">نقي</td>
+                                </tr>
+
+                                <!-- 15. ALKALI -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-gray-50">
+                                    <td class="p-4 text-center text-red-600">15</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-1"><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">ALKALI</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">القالي</td>
+                                </tr>
+
+                                <!-- 16. JAMA'A -->
+                                <tr class="hover:bg-blue-50 border-b border-gray-100 bg-white">
+                                    <td class="p-4 text-center text-red-600">16</td>
+                                    <td class="p-4 text-center">
+                                        <div class="ramli-shape">
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                            <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-blue-900">JAMA'A</td>
+                                    <td class="p-4 text-right arabic-text text-3xl text-gray-800">جماعة</td>
+                                </tr>
+
                             </tbody>
                         </table>
-                    </div>
-
-                    <p>Wadannan sune taurarin Ramli. Sannan ga hotonsu yadda suke taurari. Tauraro na farko yana da dugo: <strong>Daya, Daya, Biyu, Daya (1, 1, 2, 1)</strong>.</p>
-                    <p>Tauraro na gidan biyu (Rahika) yana da dugo: <strong>Daya, Biyu, Biyu, Biyu (1, 2, 2, 2)</strong>.</p>
-                    <p>A haka har a zo tauraro na gidan sha shida (Jama'a) yana da dugo: <strong>Biyu, Biyu, Biyu, Biyu (2, 2, 2, 2)</strong>.</p>
-
-                    <!-- WURIN HOTO A TSAKIYAR DARASI -->
-                    <div class="my-10 p-4 bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300">
-                        <p class="text-center text-sm font-bold text-gray-500 uppercase tracking-widest mb-3">Hoton Tsarin Dugo-Dugon Taurari</p>
-                        <img src="hotuna/matakinfarko.png" alt="Dugo-Dugon Taurari" class="w-full rounded-xl shadow-md bg-white">
                     </div>
 
                     <!-- KARSHEN DARASI -->
                     <div class="bg-yellow-50 border-l-8 border-yellow-500 p-6 md:p-8 rounded-r-2xl shadow-sm mt-8">
                         <p class="mb-4 text-xl">To kamar yadda na fada, dole ka san abubuwa guda uku akan su:</p>
-                        
                         <ul class="space-y-6">
                             <li class="flex flex-col md:flex-row md:items-start gap-4">
                                 <div class="bg-yellow-200 text-yellow-800 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
@@ -138,11 +359,11 @@
                     </div>
 
                     <!-- BIDIYON BAYANIN MATAKI NA FARKO -->
-                    <div class="my-10 bg-red-50 border-t-4 border-red-600 p-6 md:p-8 rounded-b-2xl shadow-md">
-                        <h3 class="text-2xl font-bold text-red-900 mb-3"><i class="fa-brands fa-youtube text-red-600 mr-2"></i> Kara Fahimtar Karatun a Aikace</h3>
+                    <div class="my-10 bg-red-50 border-t-4 border-red-600 p-4 md:p-8 rounded-b-2xl shadow-md">
+                        <h3 class="text-xl md:text-2xl font-bold text-red-900 mb-3"><i class="fa-brands fa-youtube text-red-600 mr-2"></i> Kara Fahimtar Karatun a Aikace</h3>
                         <p class="text-gray-700 mb-6">Domin ka kara fahimtar wannan karatun yadda ya kamata ba tare da wani sarkakiya ba, ga cikakken bidiyo na matakin farko wanda Malamin Zaure ya yi bayani filla-filla. Kalla a nan kasa:</p>
                         
-                       <!-- Wurin YouTube Embed (GYARARRE DOMIN WAYA DA FULLSCREEN) -->
+                        <!-- Wurin YouTube Embed (GYARARRE) -->
                         <div class="w-full overflow-hidden rounded-xl shadow-lg border-4 border-gray-800 bg-black">
                             <iframe 
                                 class="w-full h-[400px] md:h-[600px]" 
@@ -171,18 +392,11 @@
             </div>
         </div>
 
-
-
-<!-- GABA ZUWA MATAKI NA BIYU -->
-            <a href="premium-mataki-2.html" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold shadow hover:bg-blue-700 transition flex items-center gap-2">
+        <!-- MABALLAN TAFIYA (NEXT BUTTON) -->
+        <div class="mt-8 flex justify-end items-center px-2">
+            <!-- GABA ZUWA MATAKI NA BIYU -->
+            <a href="premium-mataki-2.html" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 transition flex items-center gap-3 text-lg">
                 Mataki na 2 <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        
-
-        <!-- MABALLIN KOMAWA GIDA NA VIP -->
-        <div class="mt-10 text-center">
-            <a href="index.html" class="inline-flex items-center gap-2 bg-gray-800 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-gray-700 transition">
-                <i class="fa-solid fa-house"></i> Koma Babban Shafi
             </a>
         </div>
 
