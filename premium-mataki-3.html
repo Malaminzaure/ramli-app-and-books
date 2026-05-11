@@ -6,181 +6,216 @@
     <title>Karatun Ramli - Mataki na Uku (VIP)</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        .arabic-text { font-family: 'Amiri', serif; }
         body { user-select: none; }
+
+        /* GYARAN DIGO */
         .dot { display: block; width: 10px; height: 10px; background-color: #1f2937; border-radius: 50%; }
+        @media (min-width: 768px) { .dot { width: 12px; height: 12px; } }
         .dot-row-1 { display: flex; justify-content: center; width: 100%; }
-        .dot-row-2 { display: flex; justify-content: center; gap: 4px; width: 100%; }
-        .ramli-mini { display: flex; flex-direction: column; align-items: center; gap: 3px; background-color: rgba(255, 255, 255, 0.7); padding: 5px; border-radius: 8px; width: 45px; margin: 0 auto 5px auto; }
+        .dot-row-2 { display: flex; justify-content: center; gap: 6px; width: 100%; }
+        .ramli-shape { display: flex; flex-direction: column; align-items: center; gap: 4px; background-color: #f3f4f6; padding: 8px; border-radius: 8px; border: 1px solid #e5e7eb; min-width: 40px; }
     </style>
 </head>
 <body class="bg-gray-100 font-sans leading-relaxed pb-20">
 
+    <!-- MABALLIN HOME A SAMA TA HAGU -->
     <div class="absolute top-4 left-4 z-50">
-        <a href="index.html" class="bg-white text-blue-900 px-4 py-2 rounded-full font-bold shadow-lg border-2 border-yellow-400 hover:bg-yellow-100 transition flex items-center gap-2 text-sm">
+        <a href="index.html" class="bg-white text-blue-900 px-4 py-2 rounded-full font-bold shadow-lg border-2 border-yellow-400 hover:bg-yellow-100 transition flex items-center gap-2 text-sm md:text-base">
             <i class="fa-solid fa-house"></i> Gida
         </a>
     </div>
 
-    <div class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white pt-16 pb-8 px-6 shadow-2xl text-center border-b-4 border-yellow-500 relative">
-        <h1 class="text-2xl md:text-5xl font-extrabold text-yellow-400 tracking-wide uppercase">
+    <!-- HEADER NA VIP -->
+    <div class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white pt-16 pb-8 px-6 shadow-2xl text-center border-b-4 border-yellow-500 relative">
+        <div class="absolute top-4 right-4 text-yellow-400 opacity-50">
+            <i class="fa-solid fa-lock text-3xl md:text-4xl"></i>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-yellow-400 tracking-wide drop-shadow-md">
             KARATUN RAMLI CIKAKKE
         </h1>
-        <p class="text-blue-200 mt-2 text-sm md:text-xl font-bold tracking-widest uppercase">
-            Mataki na Uku: Dabi'un Taurari (2)
+        <p class="text-blue-200 mt-3 text-lg md:text-xl font-bold tracking-widest uppercase">
+            Sashin Kwararru (VIP)
         </p>
     </div>
 
-    <div class="w-full max-w-5xl mx-auto p-3 md:p-6 mt-6">
+    <!-- CONTENT -->
+    <div class="container mx-auto p-3 md:p-4 max-w-4xl mt-6">
 
-        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-t-8 border-indigo-600 p-6 md:p-10">
+        <!-- Katin Darasi -->
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-t-8 border-yellow-500">
             
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-extrabold text-indigo-900 border-b-2 border-gray-100 pb-4 uppercase">
-                    Motsi da Yanayin Taurari
-                </h2>
-                <p class="mt-4 text-gray-600 font-bold italic">Wannan matakin zai taimaka maka gane mutum dan gari ne ko dan waje.</p>
+            <div class="p-4 md:p-10">
+                <div class="text-center mb-8">
+                    <span class="bg-red-100 text-red-800 font-bold px-4 py-2 rounded-full text-sm uppercase tracking-widest"><i class="fa-solid fa-graduation-cap"></i> Mataki na Uku</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mt-4 border-b-2 border-gray-100 pb-4">
+                        DABI'UN TAURARI (Kashi Hudu)
+                    </h2>
+                </div>
+
+                <div class="space-y-8 text-gray-800 text-lg md:text-xl leading-relaxed">
+                    
+                    <!-- MUHIMMANCIN DARASIN (GARGADI) -->
+                    <div class="bg-yellow-50 border-l-8 border-yellow-600 p-5 md:p-8 rounded-xl shadow-md">
+                        <p class="font-extrabold text-gray-800 mb-2">Kasani mai karatu!</p>
+                        <p class="text-gray-700">Wannan yana daya daga cikin darussa masu muhimmanci saboda haka doki ka haddace wannan darasin. Kasani su taurarin ramli sun kasu kashi 4:</p>
+                        <ul class="mt-4 space-y-2 font-bold text-base md:text-lg">
+                            <li>🔥 <span class="text-red-600">NARI</span> - Masu dabi'ar wuta</li>
+                            <li>💨 <span class="text-blue-500">HAWA'I</span> - Masu dabi'ar iska</li>
+                            <li>💧 <span class="text-teal-600">MA'I</span> - Masu dabi'ar ruwa</li>
+                            <li>🌍 <span class="text-amber-700">TURABI</span> - Masu dabi'ar kasa</li>
+                        </ul>
+                    </div>
+
+                    <p class="font-bold text-center border-b-2 pb-2 text-indigo-900">Ga rabe rabensu a kasa, ya zama dole ka haddace kowanne saboda nan gaba dole sai ka nemi darasin.</p>
+
+                    <!-- TSARIN TAURARI GIDA 4 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        
+                        <!-- 1. TAURARI NARI (WUTA) -->
+                        <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-5 shadow-sm">
+                            <h3 class="text-xl font-extrabold text-red-800 mb-4 flex items-center gap-2 border-b border-red-200 pb-2">
+                                <i class="fa-solid fa-fire text-red-500"></i> TAURARIN NARI (Wuta)
+                            </h3>
+                            <div class="grid grid-cols-2 gap-3 text-sm md:text-base font-bold text-gray-800 text-center">
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
+                                    Kausaji
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
+                                    Rahika
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
+                                    Nasara Karija
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
+                                    Jama'a
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. TAURARI HAWA'I (ISKA) -->
+                        <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 shadow-sm">
+                            <h3 class="text-xl font-extrabold text-blue-800 mb-4 flex items-center gap-2 border-b border-blue-200 pb-2">
+                                <i class="fa-solid fa-wind text-blue-500"></i> TAURARIN HAWA'I (Iska)
+                            </h3>
+                            <div class="grid grid-cols-2 gap-3 text-sm md:text-base font-bold text-gray-800 text-center">
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
+                                    Rayya
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
+                                    Humra
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
+                                    Ijtima'i
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
+                                    Alkali
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. TAURARI MA'I (RUWA) -->
+                        <div class="bg-teal-50 border-2 border-teal-200 rounded-2xl p-5 shadow-sm">
+                            <h3 class="text-xl font-extrabold text-teal-800 mb-4 flex items-center gap-2 border-b border-teal-200 pb-2">
+                                <i class="fa-solid fa-water text-teal-500"></i> TAURARIN MA'I (Ruwa)
+                            </h3>
+                            <div class="grid grid-cols-2 gap-3 text-sm md:text-base font-bold text-gray-800 text-center">
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
+                                    Bayada
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
+                                    Dariki
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
+                                    Kabla Karija
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
+                                    Sa'ili
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. TAURARI TURABI (KASA) -->
+                        <div class="bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 shadow-sm">
+                            <h3 class="text-xl font-extrabold text-amber-800 mb-4 flex items-center gap-2 border-b border-amber-200 pb-2">
+                                <i class="fa-solid fa-earth-africa text-amber-600"></i> TAURARIN TURABI (Kasa)
+                            </h3>
+                            <div class="grid grid-cols-2 gap-3 text-sm md:text-base font-bold text-gray-800 text-center">
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
+                                    Inkis
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
+                                    Iskafi
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
+                                    Nasara Dakila
+                                </div>
+                                <div class="bg-white p-3 rounded-lg shadow border border-gray-100 flex flex-col items-center gap-2">
+                                    <div class="ramli-shape"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
+                                    Nakiyya
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- BIDIYON BAYANIN MATAKI NA UKU (SHORT VIDEO) -->
+                    <div class="my-10 bg-gray-900 border-t-4 border-red-600 p-4 md:p-8 rounded-b-2xl shadow-md">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-3 text-center"><i class="fa-brands fa-youtube text-red-500 mr-2"></i> Kara Fahimtar Karatun a Aikace</h3>
+                        
+                        <!-- Wurin YouTube Embed Na Tsaye (YouTube Shorts) -->
+                        <div class="w-full flex justify-center mt-6">
+                            <div class="w-full max-w-sm overflow-hidden rounded-xl shadow-lg border-4 border-gray-700 bg-black">
+                                <iframe 
+                                    class="w-full h-[500px] md:h-[600px]" 
+                                    src="https://www.youtube.com/embed/JA1geXfpfic?rel=0&modestbranding=1" 
+                                    title="Karatun Ramli Mataki Na Uku" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
+                                    allowfullscreen="true">
+                                </iframe>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-center text-sm mt-3 italic">Danna kan bidiyon don kallo cikin sauki.</p>
+                    </div>
+
+                </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5">
-                    <h3 class="text-xl font-black text-blue-800 mb-4 border-b border-blue-200 pb-2 uppercase">
-                        <i class="fa-solid fa-door-closed mr-2"></i> Dakilai (Yan Ciki)
-                    </h3>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Rayya</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Inkis</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Nasara Dakila</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Alkali</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-orange-50 border-2 border-orange-200 rounded-2xl p-5">
-                    <h3 class="text-xl font-black text-orange-800 mb-4 border-b border-orange-200 pb-2 uppercase">
-                        <i class="fa-solid fa-door-open mr-2"></i> Karijai (Yan Waje)
-                    </h3>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Rahika</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Kabla Karija</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Nasara Karija</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Sa'ili</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-green-50 border-2 border-green-200 rounded-2xl p-5">
-                    <h3 class="text-xl font-black text-green-800 mb-4 border-b border-green-200 pb-2 uppercase">
-                        <i class="fa-solid fa-anchor mr-2"></i> Sabitai (Tabbatattu)
-                    </h3>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Dariki</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Iskafi</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Ijtima'i</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Jama'a</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-5">
-                    <h3 class="text-xl font-black text-red-800 mb-4 border-b border-red-200 pb-2 uppercase">
-                        <i class="fa-solid fa-rotate mr-2"></i> Munkalabai (Masu Juyawa)
-                    </h3>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Kausaji</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Bayada</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Humra</span>
-                        </div>
-                        <div class="bg-white p-2 rounded-lg text-center shadow-sm">
-                            <div class="ramli-mini"><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div><div class="dot-row-1"><span class="dot"></span></div></div>
-                            <span class="text-sm font-bold">Nakiyya</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="mt-12 bg-yellow-50 border-l-8 border-yellow-500 p-6 rounded-r-2xl shadow-inner">
-                <h3 class="font-bold text-xl text-yellow-900 mb-2 uppercase">Muhimmancin Darasin nan:</h3>
-                <p class="text-gray-800 text-lg leading-relaxed">
-                    Sanin wannan matakin yanada matukar muhimmanci dole sai kasanshi kafin ka iya cire wasu hukunce-hukunce. Saboda dashi zaka iya gane mutum <strong>dan gari ne</strong> ko <strong>dan waje</strong>, da duk wani abinda ya danganci haka.saboda haka yan uwa ahaddace wannan matakin zakuga naware taurarin daban daban ga dakilai ga karijai ga sabitai ga munkalabai kuma anaso kowanne kahaddacesu fatan alkairi
-                </p>
-                <p class="mt-4 font-extrabold text-red-600 text-center uppercase tracking-widest animate-pulse">
-                    sannan ga video akasa domin akara fahimta sosai Ina fatan za'a maida hankali akan wannan darasi a haddaceshi!
-                </p>
-            </div>
-
-            <div class="my-12 bg-black p-2 md:p-4 rounded-2xl shadow-2xl">
-    <h3 class="text-xl font-bold text-white mb-4 text-center">
-        <i class="fa-brands fa-youtube text-red-500 mr-2"></i> Kalli Bidiyon Cikakken Bayani
-    </h3>
-    <div class="w-full">
-        <iframe 
-            class="w-full h-[450px] md:h-[750px] rounded-xl" 
-            src="https://www.youtube.com/embed/DIyIL8HzKdw?si=0qiUUmirxF2uVuul" 
-            title="Dabi'un Taurari 2" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
-
         </div>
 
-        <div class="mt-10 flex justify-between items-center px-2">
-            <a href="premium-mataki-2.html" class="bg-gray-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-700 transition flex items-center gap-2">
+        <!-- MABALLAN TAFIYA (NEXT / BACK) -->
+        <div class="mt-8 flex justify-between items-center px-2">
+            <!-- BAYA ZUWA MATAKI NA 2 -->
+            <a href="premium-mataki-2.html" class="bg-gray-600 text-white px-5 py-3 rounded-full font-bold shadow-lg hover:bg-gray-700 transition flex items-center gap-2">
                 <i class="fa-solid fa-arrow-left"></i> Baya
             </a>
-            <a href="premium-mataki-4.html" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-indigo-700 transition flex items-center gap-2">
+            
+            <!-- GABA ZUWA MATAKI NA 4 -->
+            <a href="premium-mataki-4.html" class="bg-blue-600 text-white px-5 md:px-8 py-3 md:py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 transition flex items-center gap-2 md:gap-3 text-base md:text-lg">
                 Mataki na 4 <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
 
     </div>
+
 </body>
 </html>
