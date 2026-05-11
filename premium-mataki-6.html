@@ -3,130 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karatun Ramli - Mataki na 6</title>
+    <title>Karatun Ramli - Mataki na 6 (Cikakke)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <style>
         .arabic-text { font-family: 'Amiri', serif; }
-        .dot { @apply block w-3 h-3 bg-gray-800 rounded-full shadow-sm; }
-        .dot-row-1 { @apply flex justify-center; }
-        .dot-row-2 { @apply flex justify-center gap-2; }
-        .ramli-shape { @apply flex flex-col items-center gap-1 bg-gray-100 p-2 rounded-lg border border-gray-200 w-16 mx-auto; }
+        /* Gyaran dugo-dugo don su fito radau */
+        .dot { display: block; width: 10px; height: 10px; background-color: #1e3a8a; border-radius: 9999px; }
+        .dot-row { display: flex; justify-content: center; gap: 6px; margin-bottom: 2px; }
+        .ramli-box { background: #f8fafc; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0; width: 60px; margin: 0 auto; }
     </style>
 </head>
-<body class="bg-gray-50 p-4 md:p-8">
+<body class="bg-gray-50 p-4">
 
     <div class="max-w-4xl mx-auto">
-        <h1 class="text-2xl font-extrabold text-blue-900 text-center mb-8 border-b-4 border-yellow-500 pb-4">
-            MATAKI NA 6: HADAKAR HARAFFAI DA TAURARI
-        </h1>
+        <h1 class="text-2xl font-bold text-center text-blue-900 mb-6 border-b-2 border-yellow-500 pb-2">MATAKI NA 6: CIKAKKEN JERIN TAURARI 16</h1>
 
-        <div class="overflow-x-auto shadow-xl rounded-xl">
-            <table class="w-full bg-white border-collapse">
-                <thead>
-                    <tr class="bg-blue-900 text-white text-sm">
-                        <th class="p-4 text-center">Ɗugo-Ɗugo</th>
-                        <th class="p-4 text-left">Suna</th>
-                        <th class="p-4 text-right">Haraffai</th>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-blue-900 text-white">
+                    <tr>
+                        <th class="p-3 text-center">Sura</th>
+                        <th class="p-3">Suna</th>
+                        <th class="p-3 text-right">Haraffai</th>
                     </tr>
                 </thead>
-                <tbody class="text-lg font-bold">
-                    
-                    <tr class="border-b">
-                        <td class="p-4">
-                            <div class="ramli-shape">
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                            </div>
-                        </td>
-                        <td class="p-4 text-blue-800">KAUSAJI</td>
-                        <td class="p-4 text-right arabic-text text-2xl">ط ذ</td>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div></div></td>
+                        <td class="font-bold">KAUSAJI</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ط ذ</td>
                     </tr>
-
-                    <tr class="border-b">
-                        <td class="p-4">
-                            <div class="ramli-shape">
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                            </div>
-                        </td>
-                        <td class="p-4 text-blue-800">RAHIKA</td>
-                        <td class="p-4 text-right arabic-text text-2xl">ا ف</td>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div></div></td>
+                        <td class="font-bold">RAHIKA</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ا ف</td>
                     </tr>
-
-                    <tr class="border-b">
-                        <td class="p-4">
-                            <div class="ramli-shape">
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                            </div>
-                        </td>
-                        <td class="p-4 text-blue-800">RAYYA</td>
-                        <td class="p-4 text-right arabic-text text-2xl">ز ث</td>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div></div></td>
+                        <td class="font-bold">RAYYA</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ز ث</td>
                     </tr>
-
-                    <tr class="border-b">
-                        <td class="p-4">
-                            <div class="ramli-shape">
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                            </div>
-                        </td>
-                        <td class="p-4 text-blue-800">BAYADA</td>
-                        <td class="p-4 text-right arabic-text text-2xl">د ر</td>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div></div></td>
+                        <td class="font-bold">BAYADA</td>
+                        <td class="p-3 text-right arabic-text text-2xl">د ر</td>
                     </tr>
-
-                    <tr class="border-b">
-                        <td class="p-4">
-                            <div class="ramli-shape">
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                            </div>
-                        </td>
-                        <td class="p-4 text-blue-800">DARIKI</td>
-                        <td class="p-4 text-right arabic-text text-2xl">ع</td>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div></div></td>
+                        <td class="font-bold">DARIKI</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ع</td>
                     </tr>
-
-                    <tr class="border-b">
-                        <td class="p-4">
-                            <div class="ramli-shape">
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-1"><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                            </div>
-                        </td>
-                        <td class="p-4 text-blue-800">NASARA KARIJA</td>
-                        <td class="p-4 text-right arabic-text text-2xl">ه ش</td>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div></div></td>
+                        <td class="font-bold">KABLA KARIJA</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ل غ</td>
                     </tr>
-
-                    <tr class="border-b">
-                        <td class="p-4">
-                            <div class="ramli-shape">
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                                <div class="dot-row-2"><span class="dot"></span><span class="dot"></span></div>
-                            </div>
-                        </td>
-                        <td class="p-4 text-blue-800">JAMA'A</td>
-                        <td class="p-4 text-right arabic-text text-2xl">م</td>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div></div></td>
+                        <td class="font-bold">HUMRA</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ج ق</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div></div></td>
+                        <td class="font-bold">INKIS</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ن ص</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div></div></td>
+                        <td class="font-bold">NASARA KARIJA</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ه ش</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div></div></td>
+                        <td class="font-bold">ISKAFY / JAMA'A</td>
+                        <td class="p-3 text-right arabic-text text-2xl">م ن</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div></div></td>
+                        <td class="font-bold">IJTIMA'I</td>
+                        <td class="p-3 text-right arabic-text text-2xl">س</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div></div></td>
+                        <td class="font-bold">NASARA DAKILA</td>
+                        <td class="p-3 text-right arabic-text text-2xl">و ت</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div></div></td>
+                        <td class="font-bold">SA'ILI</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ح خ</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div></div></td>
+                        <td class="font-bold">NAKIYYA</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ي ض</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div></div></td>
+                        <td class="font-bold">ALKALI</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ك ظ</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3"><div class="ramli-box"><div class="dot-row"><span class="dot"></span><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span></div><div class="dot-row"><span class="dot"></span><span class="dot"></span></div></div></td>
+                        <td class="font-bold">UKLATU</td>
+                        <td class="p-3 text-right arabic-text text-2xl">ب ي</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <p class="mt-6 text-center text-red-600 font-bold">Tabbatar ka duba sauran taurarin don ganin ko haraffan sun zauna yadda kake so!</p>
     </div>
-
 </body>
 </html>
