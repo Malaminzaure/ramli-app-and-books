@@ -464,6 +464,35 @@
         </div>
     </div>
 
+
+
+<!-- MODAL NA PASSWORD DOMIN HISABI -->
+    <div id="passwordModalHisabi" class="fixed inset-0 bg-gray-900 bg-opacity-90 hidden items-center justify-center z-50 backdrop-blur-sm px-4">
+        <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-8 max-w-md w-full border-t-8 border-green-500 relative animate-bounce-in">
+            <button onclick="rufeModalHisabi()" class="absolute top-3 right-4 text-gray-400 hover:text-red-600 text-3xl font-bold transition">&times;</button>
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-extrabold text-green-900 border-b-2 border-gray-100 pb-3">🔐 KARATUN HISABI CIKAKKE</h3>
+            </div>
+            <div class="text-center space-y-4 mb-6">
+                <p class="text-gray-700 font-medium text-lg leading-relaxed">Wannan sashin na musamman ne domin koyon Ilimin Hisabi (Burujai, Dacewar Ma'aurata, da Fitar da Addu'a).</p>
+                <div class="bg-green-50 border border-green-200 p-3 rounded-xl">
+                    <p class="text-gray-600 text-sm">Kudin Shiga Sashin Hisabi:</p>
+                    <p class="text-3xl font-bold text-green-600">₦3,000</p>
+                </div>
+                <a href="https://wa.me/2348109988689?text=Salam%20Malam,%20ina%20son%20siyan%20Password%20din%20Karatun%20Hisabi." class="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-2 rounded-full font-bold shadow hover:bg-green-600 transition w-full">08109988689</a>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2 text-left">Saka Password Na Hisabi:</label>
+                <input type="password" id="passwordInputHisabi" placeholder="Misali: 7777" class="w-full px-4 py-3 border-2 border-green-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-4 focus:ring-green-100 text-lg transition shadow-inner text-center tracking-widest">
+            </div>
+            <button onclick="tabbatarDaPasswordHisabi()" class="w-full bg-gradient-to-r from-green-600 to-green-800 text-white font-bold py-3 rounded-xl hover:from-green-700 hover:to-green-900 shadow-lg transform active:scale-95 transition text-lg">
+                🔓 BUDE SHAFI NA HISABI
+            </button>
+        </div>
+    </div>
+
+    
+
     <!-- SCRIPTS -->
     <script>
         function shigaPremium() {
@@ -504,6 +533,36 @@
                 document.getElementById('theme-toggle').innerHTML = "☀️";
             }
         }
+
+
+
+
+         // ================= AIKIN VIP HISABI =================
+        function shigaPremiumHisabi() {
+            document.getElementById('passwordModalHisabi').classList.remove('hidden');
+            document.getElementById('passwordModalHisabi').classList.add('flex');
+        }
+        
+        function rufeModalHisabi() {
+            document.getElementById('passwordModalHisabi').classList.add('hidden');
+            document.getElementById('passwordModalHisabi').classList.remove('flex');
+        }
+        
+        function tabbatarDaPasswordHisabi() {
+            var input = document.getElementById('passwordInputHisabi').value;
+            // Password na Hisabi zaka iya sa daban, misali "7777"
+            if (input === "7777") {
+                window.location.href = "premium-hisabi-1.html";
+            } else {
+                document.getElementById('passwordInputHisabi').style.borderColor = "red";
+                if(confirm("Password ba daidai bane!\n\nKana so ka yi magana ta WhatsApp domin samun Password na Hisabi?")) {
+                    window.location.href = "https://wa.me/2348109988689?text=Salam%20Malam,%20ina%20son%20siyan%20Password%20din%20Hisabi.";
+                }
+            }
+        }
     </script>
+
+
+
 </body>
 </html>
