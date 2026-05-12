@@ -41,13 +41,25 @@
                 <h1 class="text-xl md:text-2xl font-bold text-center">DARUSSAN MALAMIN ZAURE</h1>
                 <button onclick="canjaKala()" id="theme-toggle" class="p-2 rounded-full bg-blue-800 hover:bg-blue-600 transition text-xl shadow-inner">🌙</button>
             </div>
-            <div class="grid grid-cols-2 gap-2">
+
+            <!-- BUTTONS CONTAINER (Grid System na Buttons 3) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-2 px-2">
+                
+                <!-- 1. BUTTON NA SIYAN LITTATTAFAI -->
                 <a href="littattafai.html" class="bg-yellow-400 text-blue-900 text-sm md:text-base font-bold py-3 rounded shadow-md hover:bg-yellow-300 text-center flex items-center justify-center animate-pulse">
                    🛒 LITTATTAFAI
                 </a>
+
+                <!-- 2. BUTTON NA VIP RAMLI -->
                 <button onclick="shigaPremium()" class="bg-red-600 text-white text-sm md:text-base font-bold py-3 rounded shadow-md hover:bg-red-700 text-center flex items-center justify-center border border-white animate-pulse">
-                   🔐 KARATUKAN RAMLI DAGA FARKO
+                   🔐 VIP RAMLI
                 </button>
+
+                <!-- 3. SABON BUTTON NA VIP HISABI -->
+                <button onclick="shigaPremiumHisabi()" class="bg-green-600 text-white text-sm md:text-base font-bold py-3 rounded shadow-md hover:bg-green-700 text-center flex items-center justify-center border border-white animate-pulse">
+                   🔐 VIP HISABI
+                </button>
+
             </div>
         </div>
     </header>
